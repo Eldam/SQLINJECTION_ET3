@@ -33,7 +33,6 @@ html, body and stuff
 body {
     font-size: 100%;
     font-family: 'PT Sans', sans-serif;
-    background-color: #f3f3f3;
 }
 
 /* ==========================================================================
@@ -93,7 +92,7 @@ layout
 ========================================================================== */
 .container {
     max-width: 100%;
-    margin: 0 auto;
+   /* margin: 0 auto;*/
     overflow: hidden;
 }
 
@@ -125,15 +124,15 @@ layout
     width: 25%;
 }
 
-label {
+.floatLeft {
     cursor: pointer;
-    border-right: 1px solid #d1d4d9;
+    /*border-right: 1px solid #d1d4d9;*/
     display: block;
     height: 4rem;
     width: 4rem;
     position: relative;
 }
-label span {
+.floatLeft span {
     border-radius: 15%;
     height: 3px;
     width: 32px;
@@ -144,7 +143,7 @@ label span {
     transform: translateY(-50%) translateX(-50%);
     transition: all 0.3s ease-out;
 }
-label span:before {
+.floatLeft span:before {
     border-radius: 15%;
     position: absolute;
     content: "";
@@ -154,7 +153,7 @@ label span:before {
     top: 400%;
     transition: all 0.3s ease-out;
 }
-label span:after {
+.floatLeft span:after {
     border-radius: 15%;
     position: absolute;
     content: "";
@@ -165,16 +164,16 @@ label span:after {
     transition: all 0.3s ease-out;
 }
 
-label:hover span {
+.floatLeft:hover span {
     height: 0;
     transition: all 0.3s ease-out;
 }
-label:hover span:before {
+.floatLeft:hover span:before {
     height: 3px;
     transform: rotate(-45deg);
     transition: all 0.3s ease-out;
 }
-label:hover span:after {
+.floatLeft:hover span:after {
     height: 3px;
     transform: rotate(45deg);
     transition: all 0.3s ease-out;
@@ -182,33 +181,33 @@ label:hover span:after {
 
 .bar {
     color: white;
-    background-color: #4a4e54;
+    background-color: #292C2F;
     line-height: 4rem;
-    border: 1px solid grey;
+    border-top: 1px solid grey;
 }
 
-nav {
-    border-left: 1px solid #d1d4d9;
+.navigation {
+   /* border-left: 1px solid #d1d4d9;
     border-right: 1px solid #d1d4d9;
-    border-bottom: 1px solid #d1d4d9;
+    border-bottom: 1px solid #d1d4d9;*/
     max-width: 300px;
-    background-color: white;
+    background-color: #292C2F;
     transform: translateX(-100%) scale(1, 0.1);
     transform-origin: top left;
     transition: all 0.3s ease-out;
 }
-nav ul {
+.navigation .line {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-nav ul li {
+.navigation .line .line2 {
     border-top: 1px solid #efefef;
     opacity: 0;
     transform: translateX(-100%);
     transition: all 0.6s ease-out;
 }
-nav ul li a {
+.navigation .line .line2 a {
     transition: all 0.3s ease-out;
     line-height: 1rem;
     text-decoration: none;
@@ -216,24 +215,24 @@ nav ul li a {
     display: block;
     padding: 1rem;
 }
-nav ul li:first-child {
+.navigation .line .line2:first-child {
     border-top: none;
 }
-nav ul li:hover a {
-    color: white;
+.navigation .line .line2:hover a {
+    color: #D3A953;
     background-color: #6d747e;
     transition: all 0.3s ease-out;
 }
-nav ul li:hover a i {
-    color: white;
+.navigation .line .line2:hover a i {
+    color: #D3A953;
 }
 
-.navBtn:checked ~ nav {
+.navBtn:checked ~ .navigation {
     transform: translateX(0);
     transition: all 0.3s ease-out;
 }
 
-.navBtn:checked ~ nav ul li {
+.navBtn:checked ~ .navigation .line .line2 {
     opacity: 1;
     transform: translateX(0);
     transition: all 0.6s ease-out;

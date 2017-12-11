@@ -1,6 +1,6 @@
 body{
     margin:0;
-    color:#B6FF19;
+    color: #cecacf;
    /* background:#c8c8c8;*/
     font:600 16px/18px 'Open Sans',sans-serif;
 }
@@ -23,7 +23,7 @@ a{color:inherit;text-decoration:none}
     height:100%;
     position:absolute;
     padding:90px 70px 50px 70px;
-    background: rgba(240, 47, 0, 0.8);
+    background: rgba(45, 95, 191, 0.7);
 }
 .login-html .sign-in-htm,
 .login-html .sign-up-htm{
@@ -49,6 +49,7 @@ a{color:inherit;text-decoration:none}
 .login-html .tab{
     font-size:22px;
     margin-right:15px;
+    cursor: pointer;
     padding-bottom:5px;
     margin:0 15px 10px 0;
     display:inline-block;
@@ -56,7 +57,7 @@ a{color:inherit;text-decoration:none}
 }
 .login-html .sign-in:checked + .tab,
 .login-html .sign-up:checked + .tab{
-    color:#fff;
+    color:#27F6FF;
     border-color:#1161ee;
 }
 .login-form{
@@ -91,15 +92,16 @@ a{color:inherit;text-decoration:none}
     font-size:12px;
 }
 .login-form .group .button{
-    background: #485dd9;
+    background: #2d5ab3;
 }
 .login-form .group .button:hover{
-    transition:all .3s linear;
-    background: #689bff;
+    transition:all .1s linear;
+    box-shadow: 0 0 0 3px rgba(36, 172, 232, 0.5);
+    background: #2e4b96;
 }
 .login-form .group .button:active{
     background: #454aff;
-    color:black;
+    color: #fffc46;
 }
 .login-form .group label .icon{
     width:15px;
