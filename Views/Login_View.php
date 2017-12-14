@@ -10,11 +10,10 @@ class Login{
 
     function render(){
 
-        /*include '../Locales/Header.html';
-        include '../Locales/LateralBar.html';
+        include '../Locales/Header.html';
+        include '../Locales/LateralBarUser.html';
         include '../Locales/Login.html';
-        include '../Locales/Footer.html';*/
-        include '../Locales/EJEMPLO.html';
+        include '../Locales/Footer.html';
     } //fin metodo render
 
 } //fin Login

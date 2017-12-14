@@ -126,7 +126,8 @@ layout
 
 .floatLeft {
     cursor: pointer;
-    /*border-right: 1px solid #d1d4d9;*/
+    border-right: 1px solid #d1d4d9;
+    border-bottom: 1px solid #d1d4d9;
     display: block;
     height: 4rem;
     width: 4rem;
@@ -181,15 +182,15 @@ layout
 
 .bar {
     color: white;
-    background-color: #292C2F;
+    background-color: rgba(0,0,0,0);
     line-height: 4rem;
     border-top: 1px solid grey;
 }
 
 .navigation {
-   /* border-left: 1px solid #d1d4d9;
+    border-top: 1px solid #d1d4d9;
     border-right: 1px solid #d1d4d9;
-    border-bottom: 1px solid #d1d4d9;*/
+    border-bottom: 1px solid #d1d4d9;
     max-width: 300px;
     background-color: #292C2F;
     transform: translateX(-100%) scale(1, 0.1);
