@@ -12,6 +12,7 @@ class Login{
 
         include '../Locales/Header.html';
         include '../Locales/LateralBarUser.html';
+        $_REQUEST['register']= 'true';
         include '../Locales/Login.php';
         include '../Locales/Footer.html';
     } //fin metodo render
