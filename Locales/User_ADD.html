@@ -1,10 +1,12 @@
+<meta charset="utf-8">
+<link rel="stylesheet" href="../Locales/User_ADD.css">
 <div class="AddFormContainer">
     <div class="AddFormHeader">
         Añadir Usuario
     </div>
     <br>
 
-    <form action="../Controllers/Register_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
+    <form action="../Controllers/User_ADD_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
         <div class="AddForm1">
             <br>
             Login*:
@@ -20,45 +22,28 @@
             <br>
             <input type="text" name="DNI" size="25" maxlength="9" placeholder="DNI" onchange="comprobarAlfabetico(this,9)">
             <br>
-            Fecha Nacimiento*:
-            <br>
-            <div class="calendar">
-                <input type="text" name="FechaNacimiento" class="tcal" placeholder="Fecha Nacimiento" readonly>
-            </div>
             Email*:
             <br>
-            <input  type="Email" name="email" size="50" maxlength="50" placeholder="example@host.com" onchange="comprobarEmail(this,50)">
-        </div>
-        <br>
+            <input  type="Email" name="Correo" size="50" maxlength="50" placeholder="example@host.com" onchange="comprobarEmail(this,50)">
 
-        <div class="AddForm2">
             Nombre*:
             <br>
-            <input type="text" name="nombre" size="25" maxlength="25" placeholder="Nombre" onchange="comprobarAlfabetico(this,25)">
+            <input type="text" name="Nombre" size="25" maxlength="25" placeholder="Nombre" onchange="comprobarAlfabetico(this,25)">
             <br>
             Apellido*:
             <br>
-            <input type="text" name="apellidos" size="25" maxlength="50" placeholder="Apellido"  onchange="comprobarAlfabetico(this,50)">
+            <input type="text" name="Apellido" size="25" maxlength="50" placeholder="Apellido"  onchange="comprobarAlfabetico(this,50)">
             <br>
             Telefono*:
             <br>
-            <input class="telefono" type="text" name="telefono" placeholder="Telef" size="1">
+            <input class="telefono" type="text" name="Telefono" placeholder="Telef" size="9">
             <br>
-            Foto Personal*:
+            Direccion*:
             <br>
-            <input type="text" name="fotopersonal" placeholder="foto personal" size="25" maxlength="60" onchange="comprobarAlfabetico(this,60)">
+            <input type="text" name="Direccion" placeholder="Direccion" size="25" maxlength="60" onchange="comprobarAlfabetico(this,60)">
             <br>
-            Sexo*:
-            <br>
-            <select class="sexo" name="sexo" >
-
-                <option value="">Seleccionar sexo</option>
-                <option value="hombre">Hombre</option>
-                <option value="mujer">Mujer</option>
-
-            </select>
             <div class="buttonSumit">
-                <input id="buttonSumitIcon" class="buttonIconSend" type="image" src="../Locales/sendIcon.png" value="Añadir" onclick ="comprobarFormsVacios(this)">
+                <input id="send" type="submit" class="button" value="Sign In" onclick="comprobarVacio(this)">
             </div>
 
         </div>

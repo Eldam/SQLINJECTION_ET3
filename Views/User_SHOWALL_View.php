@@ -58,13 +58,11 @@ class User_SHOWALL_View {
 
 
                     ?>
-
-
-
                 </table>
             </div>
         </div>
 
+        <a href=' ../Controllers/Index_Controller.php'><i class="fa fa-arrow-circle-left " id="backIcon"></i></a>
 
 
 
