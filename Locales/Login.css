@@ -1,8 +1,7 @@
 body{
     margin:0;
     color: #cecacf;
-   /* background:#c8c8c8;*/
-    font:600 16px/18px 'Open Sans',sans-serif;
+    font:600 12px/14px 'Open Sans',sans-serif;
 }
 *,:after,:before{box-sizing:border-box}
 .clearfix:after,.clearfix:before{content:'';display:table}
@@ -15,16 +14,16 @@ a{color:inherit;text-decoration:none}
     max-width:525px;
     min-height:670px;
     position:relative;
-    /*background:url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;*/
     box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 .login-html{
     width:100%;
     height:100%;
     position:absolute;
-    padding:90px 70px 50px 70px;
+    padding:50px 70px 50px 70px;
     background: rgba(45, 95, 191, 0.7);
 }
+
 .login-html .sign-in-htm,
 .login-html .sign-up-htm{
     top:0;
@@ -48,7 +47,6 @@ a{color:inherit;text-decoration:none}
 }
 .login-html .tab{
     font-size:22px;
-    margin-right:15px;
     cursor: pointer;
     padding-bottom:5px;
     margin:0 15px 10px 0;
@@ -76,10 +74,17 @@ a{color:inherit;text-decoration:none}
     color:#fff;
     display:block;
 }
-.login-form .group .input,
-.login-form .group .button{
+.login-form .sign-in-htm .group .input,
+.login-form .sign-in-htm .group .button{
     border:none;
     padding:15px 20px;
+    border-radius:25px;
+    background:rgba(255,255,255,.1);
+}
+.login-form .sign-up-htm .group .input,
+.login-form .sign-up-htm .group .button{
+    border:none;
+    padding:5px 20px;
     border-radius:25px;
     background:rgba(255,255,255,.1);
 }
@@ -91,15 +96,15 @@ a{color:inherit;text-decoration:none}
     color: #ece4ef;
     font-size:12px;
 }
-.login-form .group .button{
+#send{
     background: #2d5ab3;
 }
-.login-form .group .button:hover{
+.login-form .group #send:hover{
     transition:all .1s linear;
     box-shadow: 0 0 0 3px rgba(36, 172, 232, 0.5);
     background: #2e4b96;
 }
-.login-form .group .button:active{
+.login-form .group #send:active{
     background: #454aff;
     color: #fffc46;
 }

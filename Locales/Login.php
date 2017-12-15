@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../Locales/Login.css">
+<link rel="text/javascript" href="../Locales/Validaciones.js">
 <div class="main">
 
     <div class="login-wrap">
@@ -11,19 +12,15 @@
 
                     <div class="sign-in-htm">
                         <div class="group">
-                            <label for="user" class="label">Username</label>
-                            <input id="user" type="text" class="input">
+                            <label for="login" class="label">Username</label>
+                            <input id="login" name="login"  type="text" class="input" autofocus onchange="comprobarVacio(this);">
                         </div>
                         <div class="group">
-                            <label for="pass" class="label">Password</label>
-                            <input id="pass" type="password" class="input" data-type="password">
+                            <label for="password" class="label">Password</label>
+                            <input id="password" name="password" type="password" class="input" data-type="password" required onchange="comprobarVacio(this);comprobarAlfabetico(this,9)">
                         </div>
                         <div class="group">
-                            <input id="check" type="checkbox" class="check" checked>
-                            <label for="check"><span class="icon"></span> Keep me Signed in</label>
-                        </div>
-                        <div class="group">
-                            <input type="submit" class="button" value="Sign In">
+                            <input id="send" type="submit" class="button" value="Sign In" onclick="comprobarVacio(this)">
                         </div>
                         <div class="hr"></div>
                         <div class="foot-lnk">
@@ -37,25 +34,40 @@
 
                     <div class="sign-up-htm">
                         <div class="group">
-                            <label for="user" class="label">Username</label>
-                            <input id="user" type="text" class="input">
+                            <label for="login" class="label">login</label>
+                            <input id="login" name="login"  type="text" class="input">
                         </div>
                         <div class="group">
-                            <label for="pass" class="label">Password</label>
-                            <input id="pass" type="password" class="input" data-type="password">
+                            <label for="password" class="label">Password</label>
+                            <input id="password" name="password" type="password" class="input" data-type="password">
                         </div>
                         <div class="group">
-                            <label for="pass" class="label">Repeat Password</label>
-                            <input id="pass" type="password" class="input" data-type="password">
+                            <label for="DNI" class="label">DNI</label>
+                            <input id="DNI" name="DNI" type="text" class="input">
                         </div>
                         <div class="group">
-                            <label for="pass" class="label">Email Address</label>
-                            <input id="pass" type="text" class="input">
+                            <label for="Nombre" class="label">Nombre</label>
+                            <input id="Nombre" name="Nombre" type="text" class="input">
                         </div>
                         <div class="group">
-                            <input type="submit" class="button" value="Sign Up">
+                            <label for="Apellidos" class="label">Apellidos</label>
+                            <input id="Apellidos" name="Apellidos" type="text" class="input">
                         </div>
-                        <div class="hr"></div>
+                        <div class="group">
+                            <label for="Correo" class="label">Correo</label>
+                            <input id="Correo" name="Correo" type="text" class="input">
+                        </div>
+                        <div class="group">
+                            <label for="Direccion" class="label">Direccion</label>
+                            <input id="Direccion" name="Direccion" type="text" class="input">
+                        </div>
+                        <div class="group">
+                            <label for="Telefono" class="label">Telefono</label>
+                            <input id="Telefono" name="Telefono" type="text" class="input">
+                        </div>
+                        <div class="group">
+                            <input id="send" type="submit" class="button" value="Sign Up">
+                        </div>
                         <div class="foot-lnk">
                             <label for="tab-1">Already Member?</label>
                         </div>

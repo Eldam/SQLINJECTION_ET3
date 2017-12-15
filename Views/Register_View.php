@@ -1,7 +1,7 @@
 <?php
 //m3xep6
 //08/11/2017
-class Login{
+class Register_View{
 
 
     function __construct(){
