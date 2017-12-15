@@ -22,7 +22,7 @@ else{
     if ($respuesta == 'true'){
         session_start();
         $_SESSION['login'] = $_REQUEST['login'];
-        header('Location:../index.php');
+        header('Location:../Controllers/Index_Controller.php');
     }
     else{
         include '../Views/MESSAGE_View.php';

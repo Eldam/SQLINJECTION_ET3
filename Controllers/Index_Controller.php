@@ -9,7 +9,7 @@ if (!IsAuthenticated()){
 }
 //esta autenticado
 else{
-    include '../Views/users_index_View.php';
+    include '../Views/index_View.php';
     new Index();
 }
 

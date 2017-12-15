@@ -14,12 +14,12 @@ class MESSAGE{
 	function render(){
 
 	/*	include './Strings_'.$_SESSION['idioma'].'.php';*/
-		include '../Locales/Header.php';
+		include '../Locales/Header.html';
 ?>
 		<br>
 		<br>
 		<br>
-		<H3>
+        <H3 class="errorMessage">
 <?php		
 		/*echo $strings[$this->string];*/
         echo $this->string;
@@ -31,9 +31,9 @@ class MESSAGE{
 
 <?php
 
-		echo '<a href=\'' . $this->volver . "'>" . /*$strings['Volver']*/
+		echo '<a href=\'' . $this->volver . "'>".
                                 "volver". " </a>";
-		include '../Locales/Footer.php';
+		include '../Locales/Footer.html';
 	} //fin metodo render
 
 }

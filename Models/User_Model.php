@@ -16,19 +16,15 @@ class UserDAO
     //atributo DNI: guarda el DNI.
     var $DNI;
     //atributo nombre: guarda el nombre.
-    var $nombre;
+    var $Nombre;
     //atributo apellidos: guarda el apellidos.
-    var $apellidos;
+    var $Apellidos;
     //atributo telefono: guarda el telefono.
-    var $telefono;
+    var $Telefono;
     //atributo email: guarda el email.
-    var $email;
-    //atributo FechaNacimiento: guarda el FechaNacimiento.
-    var $FechaNacimiento;
-    //atributo fotopersonal: guarda el fotopersonal.
-    var $fotopersonal;
-    //atributo sexo: guarda el sexo.
-    var $sexo;
+    var $Correo;
+    //atributo direccion: guarda la Direccion.
+    var $Direccion;
     //atributo para guardar un link a la BD.
     var $mysqli;
 
@@ -44,17 +40,35 @@ class UserDAO
         $this->mysqli = ConnectDB();
     }
 
-    function setData($DNI,$nombre,$apellidos,
-                     $telefono,$email,$FechaNacimiento,$fotopersonal,$sexo)
+    function setData($DNI,$Nombre,$Apellidos,
+                     $Telefono,$Correo,$Direccion)
     {
         $this->DNI = $DNI;
-        $this->nombre = $nombre;
-        $this->apellidos = $apellidos;
-        $this->telefono = $telefono;
-        $this->email = $email;
-        $this->FechaNacimiento = $FechaNacimiento;
-        $this->fotopersonal = $fotopersonal;
-        $this->sexo = $sexo;
+        $this->Nombre = $Nombre;
+        $this->Apellidos = $Apellidos;
+        $this->Telefono = $Telefono;
+        $this->Correo = $Correo;
+        $this->Direccion = $Direccion;
+
+    }
+
+
+    function SEARCH()
+    {
+        /* $sql = "select * from USUARIO WHERE login LIKE '%$this->login%'";*/
+        $sql = "select * from USUARIO 
+            where   
+                (login LIKE '%$this->login%') &&
+                (DNI LIKE '%$this->DNI%') &&
+                (Nombre LIKE '%$this->Nombre%') &&
+                (Apellidos LIKE '%$this->Apellidos%') &&
+                (Correo LIKE '%$this->Correo%') &&
+                (Direccion LIKE '%$this->Direccion%') &&
+                (Telefono LIKE '%$this->Telefono%')
+                ";
+        $resultado = mysqli_query($this->mysqli,$sql);
+        return $resultado;
+
     }
 
 
