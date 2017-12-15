@@ -1,0 +1,67 @@
+<div class="AddFormContainer">
+    <div class="AddFormHeader">
+        Añadir Usuario
+    </div>
+    <br>
+
+    <form action="../Controllers/Register_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
+        <div class="AddForm1">
+            <br>
+            Login*:
+            <br>
+            <input type="text" name="login" size="25" maxlength="25" placeholder="login"
+                   onchange="comprobarAlfabetico(this,25)">
+            <br>
+            Contraseña*:
+            <br>
+            <input type="password" name="password" size="25" maxlength="20" placeholder="password" onchange="comprobarAlfabetico(this,20)">
+            <br>
+            DNI*:
+            <br>
+            <input type="text" name="DNI" size="25" maxlength="9" placeholder="DNI" onchange="comprobarAlfabetico(this,9)">
+            <br>
+            Fecha Nacimiento*:
+            <br>
+            <div class="calendar">
+                <input type="text" name="FechaNacimiento" class="tcal" placeholder="Fecha Nacimiento" readonly>
+            </div>
+            Email*:
+            <br>
+            <input  type="Email" name="email" size="50" maxlength="50" placeholder="example@host.com" onchange="comprobarEmail(this,50)">
+        </div>
+        <br>
+
+        <div class="AddForm2">
+            Nombre*:
+            <br>
+            <input type="text" name="nombre" size="25" maxlength="25" placeholder="Nombre" onchange="comprobarAlfabetico(this,25)">
+            <br>
+            Apellido*:
+            <br>
+            <input type="text" name="apellidos" size="25" maxlength="50" placeholder="Apellido"  onchange="comprobarAlfabetico(this,50)">
+            <br>
+            Telefono*:
+            <br>
+            <input class="telefono" type="text" name="telefono" placeholder="Telef" size="1">
+            <br>
+            Foto Personal*:
+            <br>
+            <input type="text" name="fotopersonal" placeholder="foto personal" size="25" maxlength="60" onchange="comprobarAlfabetico(this,60)">
+            <br>
+            Sexo*:
+            <br>
+            <select class="sexo" name="sexo" >
+
+                <option value="">Seleccionar sexo</option>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+
+            </select>
+            <div class="buttonSumit">
+                <input id="buttonSumitIcon" class="buttonIconSend" type="image" src="../Locales/sendIcon.png" value="Añadir" onclick ="comprobarFormsVacios(this)">
+            </div>
+
+        </div>
+
+    </form>
+</div>
