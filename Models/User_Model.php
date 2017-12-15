@@ -44,6 +44,19 @@ class UserDAO
         $this->mysqli = ConnectDB();
     }
 
+    function setData($DNI,$nombre,$apellidos,
+                     $telefono,$email,$FechaNacimiento,$fotopersonal,$sexo)
+    {
+        $this->DNI = $DNI;
+        $this->nombre = $nombre;
+        $this->apellidos = $apellidos;
+        $this->telefono = $telefono;
+        $this->email = $email;
+        $this->FechaNacimiento = $FechaNacimiento;
+        $this->fotopersonal = $fotopersonal;
+        $this->sexo = $sexo;
+    }
+
 
     function login(){
 
