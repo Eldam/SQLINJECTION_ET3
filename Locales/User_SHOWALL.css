@@ -1,0 +1,48 @@
+.tableShowAll{
+    border-color: white;
+    border-style: dashed none none none;
+    position: relative;
+    padding-top: 20px;
+    padding-left: 100px;
+    margin: auto;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+table {
+    border: 1px solid black;
+    width: 10%;
+    border-collapse: collapse;
+    background-color: #e6f7ff;
+    color: black;
+}
+
+td, th {
+    padding: 6px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+
+tr:nth-child(even) {
+    background-color: #cceeff;
+}
+
+th{
+    background-color: #84b5ff;
+}
+
+#backIcon{
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size: 4em;
+}
+#backIcon:hover{
+    font-size: 6em;
+    color: #2A6A92;
+}
+
+#backIcon:visited{
+    font-size: 6em;
+    color: #6f6c6d;
+}

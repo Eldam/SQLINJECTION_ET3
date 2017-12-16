@@ -12,13 +12,16 @@ class User_SHOWALL_View {
 
         /*include './Strings_SPANISH.php';*/
         include '../Locales/Header.html';
-        echo '<h1>Se han encontrado '.mysqli_num_rows($this->response).'Usuarios.</h1>';
+?>
+        <link rel="stylesheet" href="../Locales/User_SHOWALL.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <?php
+        echo '<h1 style="color: white;padding-left: 100px ">Se han encontrado '.mysqli_num_rows($this->response).' Usuarios.</h1>';
         ?>
 
 
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <div class="tableShowAll">
+             <div class="tableShowAll">
 
             <div class="searchGrande">
                <!-- <a href="../Controllers/User_SEARCH_Controller.php"><i class="fa fa-search" id="searchIcon"></i></a> -->
