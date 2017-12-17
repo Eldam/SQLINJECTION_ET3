@@ -7,6 +7,6 @@ class User_ADD_View
     }
 
     function render(){
-
+            echo "<h1>addView!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</h1>";
     }
 }

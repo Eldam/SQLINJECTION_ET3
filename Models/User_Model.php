@@ -53,6 +53,75 @@ class UserDAO
     }
 
 
+
+//Metodo ADD
+//Inserta en la tabla  de la bd  los valores
+// de los atributos del objeto. Comprueba si la clave/s esta vacia y si
+//existe ya en la tabla
+    function ADD()
+    {
+        if ($this->login != '' )
+        {
+            $sql = "select * from USUARIO where login = '".$this->login."'";
+            $resultado = mysqli_query($this->mysqli,$sql);
+            $sql = "select * from USUARIO where Correo = '".$this->Correo."'";
+            $resultadoEmail = mysqli_query($this->mysqli,$sql);
+            $sql = "select * from USUARIO where DNI = '".$this->DNI."'";
+            $resultadoDNI = mysqli_query($this->mysqli,$sql);
+            if ((mysqli_num_rows($resultado) + mysqli_num_rows($resultadoEmail) + mysqli_num_rows($resultadoDNI)) == 0)
+            {
+                $sql = "INSERT INTO USUARIO (login, 
+                                            password, 
+                                            DNI, 
+                                            Nombre,
+                                            Apellidos,
+                                            Telefono,
+                                            Correo,
+                                            Direccion
+                                            ) VALUES ('";
+                $sql = $sql.$this->login."','".$this->password."','".$this->DNI."','".
+                    $this->Nombre."','".$this->Apellidos."','".$this->Telefono."','".
+                    $this->Correo."','".$this->Direccion."')";
+
+                mysqli_query($this->mysqli,$sql);
+
+                return true;
+            }
+            else{
+
+                $responseMessage = '';
+                if(mysqli_num_rows($resultado) != 0){
+                    $responseMessage =  $responseMessage ."El login ya existe";
+                }
+                if(mysqli_num_rows($resultadoEmail) != 0){
+                    $responseMessage =  $responseMessage ."El Correo ya existe";
+                }
+                if (mysqli_num_rows($resultadoDNI) != 0) {
+                    $responseMessage =  $responseMessage ."El DNI ya existe";
+                }
+                return $responseMessage;
+            }
+        }
+        else
+            return "Los campos DNI, Login y Email no pueden ser vacios.";
+    }
+
+
+
+
+    // funcion GET: recupera todos los atributos de una tupla a partir de su clave
+    function GET()
+    {
+        $sql = "select * from USUARIO where login = '".$this->login."'";
+        $resultado = mysqli_query($this->mysqli,$sql);
+
+        return $resultado;
+    }
+
+
+
+    //funcion SEARCH: hace una búsqueda en la tabla con
+    //los datos proporcionados. Si van vacios devuelve todos
     function SEARCH()
     {
         /* $sql = "select * from USUARIO WHERE login LIKE '%$this->login%'";*/
@@ -72,6 +141,72 @@ class UserDAO
     }
 
 
+
+
+    // funcion Edit: realizar el update de una tupla despues de comprobar que existe
+    function EDIT()
+    {
+        $sql = "select * from USUARIO where login = '".$this->login."'";
+        $resultado = mysqli_query($this->mysqli,$sql);
+        $sql = "select * from USUARIO where Correo = '".$this->Correo."'";
+        $resultadoEmail = mysqli_query($this->mysqli,$sql);
+        $sql = "select * from USUARIO where DNI = '".$this->DNI."'";
+        $resultadoDNI = mysqli_query($this->mysqli,$sql);
+
+        if ((mysqli_num_rows($resultado) == 1) && (mysqli_num_rows($resultadoEmail) + mysqli_num_rows($resultadoDNI)) == 0) {
+            $sql = "UPDATE USUARIO SET 
+            		password = '" . $this->password .
+                "',DNI = '" . $this->DNI .
+                "',Nombre = '" . $this->Nombre .
+                "',Apellidos = '" . $this->Apellidos .
+                "',Telefono = '" . $this->Telefono .
+                "',Correo = '" . $this->Correo .
+                "',Direccion = '" . $this->Direccion .
+                "' WHERE login = '" . $this->login . "'";
+            mysqli_query($this->mysqli, $sql);
+            return "El usuario ha sido Actualizado";
+
+        } else {
+            $responseMessage = '';
+            if(mysqli_num_rows($resultado) != 1){
+                $responseMessage =  $responseMessage ."El login no existe";
+            }
+            if(mysqli_num_rows($resultadoEmail) != 0){
+                $responseMessage =  $responseMessage ."El email ya existe";
+            }
+            if (mysqli_num_rows($resultadoDNI) != 0) {
+                $responseMessage =  $responseMessage ."El DNI ya existe";
+            }
+            return $responseMessage;
+        }
+    }
+
+
+
+
+    //funcion DELETE : comprueba que la tupla a borrar existe y una vez
+    // verificado la borra
+    function DELETE()
+    {
+        $sql = "select * from USUARIO where login = '".$this->login."'";
+        $resultado = mysqli_query($this->mysqli,$sql);
+        if (mysqli_num_rows($resultado) == 1){
+            $sql = "delete from USUARIO where login = '".$this->login."'";
+            mysqli_query($this->mysqli,$sql);
+
+            return"El usuario ha sido borrado";
+
+        }
+        else
+            return"El usuario no existe";
+
+    }
+
+
+
+    // funcion login: realiza la comprobación de si existe el usuario en la bd y despues si la pass
+    // es correcta para ese usuario. Si es asi devuelve true, en cualquier otro caso devuelve el
+    // error correspondiente
     function login(){
 
         $sql = "SELECT *
