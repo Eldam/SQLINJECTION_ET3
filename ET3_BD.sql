@@ -329,7 +329,8 @@ INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("ACESS
 INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("EDIT","Modificar","Privilegios de modificar los elementos existentes");
 INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("DELETE","Borrar","Privilegios de borrar los elementos existentes");
 INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("SEARCH","Buscar","Privilegios de buscar los elementos existentes");
-
+INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("ASSING","Gestionar Grupo",
+"Privilegios de ver, asignar o eliminar de un grupo existente a un usuario");
 
 
 #Indica que acciones possee cada funcionalidad
@@ -339,6 +340,7 @@ INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("USERS","ACESS"
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("USERS","EDIT");
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("USERS","DELETE");
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("USERS","SEARCH");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("USERS","ASSING");
 
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("GROUPS","ADD");
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("GROUPS","ACESS");
@@ -353,6 +355,7 @@ INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS"
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","USERS","EDIT");
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","USERS","DELETE");
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","USERS","SEARCH");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","USERS","ASSING");
 
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","GROUPS","ADD");
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","GROUPS","ACESS");

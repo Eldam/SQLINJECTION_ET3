@@ -1,6 +1,6 @@
 <?php
-//Este controlador precisa $_REQUEST['login'] y $_REQUEST['IdGrupo']
-//y asigna el grupo al usuario solicitado
+//Este controlador precisa $_REQUEST['login'] obtiene todos los grupos a los que pertenece dicho login
+//para posteriomente cargarlos en la vista User_ASSINGTOGROUP_View
 //Autor:
 //Fecha: 6/10/2017
 
