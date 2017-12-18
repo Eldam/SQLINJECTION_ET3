@@ -342,13 +342,23 @@ INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("USERS","SEARCH
 
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("GROUPS","ADD");
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("GROUPS","ACESS");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("GROUPS","EDIT");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("GROUPS","DELETE");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("GROUPS","SEARCH");
 
 
 #Insert PERMISO
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","USERS","ADD");
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","USERS","ACESS");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","USERS","EDIT");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","USERS","DELETE");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","USERS","SEARCH");
+
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","GROUPS","ADD");
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","GROUPS","ACESS");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","GROUPS","EDIT");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","GROUPS","DELETE");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","GROUPS ","SEARCH");
 
 
 */
