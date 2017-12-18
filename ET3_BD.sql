@@ -295,3 +295,67 @@ ALTER TABLE `PERMISO`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+
+/*
+#Insert USUARIO
+INSERT INTO `USUARIO` (`login`, `password`, `DNI`, `Nombre`, `Apellidos`, `Correo`, `Direccion`, `Telefono`) VALUES
+('admin', '21232f297a57a5a743894a0e4a801fc3', '87654321X', 'Administrator', 'Admin Admin', 'admin@admin.com', 'here', '66666666');
+INSERT INTO `USUARIO` (`login`, `password`, `DNI`, `Nombre`, `Apellidos`, `Correo`, `Direccion`, `Telefono`) VALUES
+('alumno', 'c6865cf98b133f1f3de596a4a2894630', '88888888Y', 'User', 'User User', 'user@user.com', 'there', '66666666');
+
+#Insert GRUPO
+INSERT INTO `GRUPO`(`IdGrupo`, `NombreGrupo`, `DescripGrupo`) VALUES ("ADMINS","Grupo de Aministradores",
+"Permite todas las funcionalidades del sitema");
+INSERT INTO `GRUPO`(`IdGrupo`, `NombreGrupo`, `DescripGrupo`) VALUES ("ALUMNS","Grupo de Alumnos",
+"Permite las funcionalidades del basicas del sitema");
+
+
+#Insert USU_GRUPO
+INSERT INTO `USU_GRUPO`(`login`, `IdGrupo`) VALUES ("admin","ADMINS");
+INSERT INTO `USU_GRUPO`(`login`, `IdGrupo`) VALUES ("alumno","ALUMNS");
+
+
+#Insert FUNCIONALIDAD
+INSERT INTO `FUNCIONALIDAD`(`IdFuncionalidad`, `NombreFuncionalidad`, `DescripFuncionalidad`) VALUES ("USERS","GESTIONAR USUARIOS","Permite admisistrar a los difentes usuarios del sistema");
+INSERT INTO `FUNCIONALIDAD`(`IdFuncionalidad`, `NombreFuncionalidad`, `DescripFuncionalidad`) VALUES ("GROUPS","GESTIONAR GRUPOS","Permite admisistrar a los difentes grupos de usuarios del sistema");
+
+
+#Insert ACCION
+INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("ADD","Añadir","Privilegios de añadir nuevos elementos");
+INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("ACESS","Ver todos","Privilegios de ver a todos los elementos");
+INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("EDIT","Modificar","Privilegios de modificar los elementos existentes");
+INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("DELETE","Borrar","Privilegios de borrar los elementos existentes");
+INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("SEARCH","Buscar","Privilegios de buscar los elementos existentes");
+
+
+
+#Indica que acciones possee cada funcionalidad
+#Insert FUNC_ACCION
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("USERS","ADD");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("USERS","ACESS");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("USERS","EDIT");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("USERS","DELETE");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("USERS","SEARCH")
+
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("GROUPS","ADD");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("GROUPS","ACESS");
+
+
+#Insert PERMISO
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","USERS","ADD");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","USERS","ACESS");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","GROUPS","ADD");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","GROUPS","ACESS");
+
+
+*/
+
+
+
+
+
+
+
