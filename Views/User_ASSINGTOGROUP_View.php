@@ -24,7 +24,8 @@ class User_ASSINGTOGROUP_View {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <?php
-        echo '<h1 style="color: white;padding-left: 100px ">Se han encontrado '.count($this->response).' Grupo(s).</h1>';
+        echo '<h1 style="color: white;padding-left: 100px ">Se han encontrado '.count($this->response).
+            ' Grupo(s) a los que no pertenece el usuario.</h1>';
         ?>
 
 
@@ -44,8 +45,7 @@ class User_ASSINGTOGROUP_View {
 
                         <?php
 
-                        foreach ($this->response as $groups){
-                            $group = mysqli_fetch_array($groups);
+                        foreach ($this->response as $group){
 
                             echo "<tr>";
                             echo"<td>".$group['IdGrupo']."</td>".

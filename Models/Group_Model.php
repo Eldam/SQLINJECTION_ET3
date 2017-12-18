@@ -78,8 +78,7 @@ class GroupDAO
 
     //funcion SEARCH: hace una búsqueda en la tabla con
     //los datos proporcionados. Si van vacios devuelve todos
-    function SEARCH()
-    {
+    function SEARCH(){
         /* $sql = "select * from USUARIO WHERE login LIKE '%$this->login%'";*/
         $sql = "select * from GRUPO 
             where   

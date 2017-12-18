@@ -24,13 +24,11 @@ else {
         new MESSAGE("No posee permisos para la accion solicitada", '../index.php');
     } else {
 
-
-
-
+        $login =$_REQUEST['login'];
         //Se crea un DAO con la PK
         //y se obtiene la lista de grupos a los que pertenece
         include_once '../Models/User_Model.php';
-        $userDAO = new UserDAO($_REQUEST['login'], "");
+        $userDAO = new UserDAO($login, "");
         $IDgrupos = $userDAO->getGroups();
 
         //Se crea un array para almacenar la informacion completa de
@@ -48,7 +46,7 @@ else {
 
         //se muestra la vista ShowGrups con todos los parametros obtenidos
         include_once '../Views/User_SHOWGROUPS_View.php';
-        new User_SHOWGROUPS_View($completeGoups);
+        new User_SHOWGROUPS_View($completeGoups,$login);
 
     }
 
