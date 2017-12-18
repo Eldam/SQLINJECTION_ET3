@@ -26,29 +26,34 @@ else {
 
 
 
-
         //Se crea un DAO con la PK
         //y se obtiene la lista de grupos a los que pertenece
         include_once '../Models/User_Model.php';
         $userDAO = new UserDAO($_REQUEST['login'], "");
-        $IDgrupos = $userDAO->getGroups();
+        $userIdGroups = $userDAO->getGroups();
 
-        //Se crea un array para almacenar la informacion completa de
-        // todos los grupos a los que pertence el usuario
-        $completeGoups = Array();
+        //echo "<br><h1 style='color: red'> "."".implode($userIdGroups)."</h1><br>";
 
+        //Se crea un DAO con la PK
+        //y se obtiene la lista de todos grupos
         include_once '../Models/Group_Model.php';
-        //Se itera a traves del array de IDgrupos y se carga en el complete grups
-        //la informacion completa de cada grupo
-        foreach($IDgrupos as $group){
-            $completeGoups[] = (new GroupDAO($group))->GET();
+        $allGroups= (new GroupDAO(""))->SEARCH();
+
+        //Se crea un array vacio
+        $notUserGroups = Array();
+
+        //Se añaden al array $notUserGroups todos los grupos que no posee el usuario
+        while ($group = mysqli_fetch_array($allGroups)){
+            if(!in_array($group["IdGrupo"],$userIdGroups)){
+                $notUserGroups[] = $group;
+            }
         }
 
 
 
-        //se muestra la vista ShowGrups con todos los parametros obtenidos
-        include_once '../Views/User_SHOWALL_View.php';
-        new User_ASSINGTOGROUP_View($completeGoups);
+        //se muestra la vista ASSINGTOGROUP con todos los parametros obtenidos
+        include_once '../Views/User_ASSINGTOGROUP_View.php';
+        new User_ASSINGTOGROUP_View($notUserGroups);
 
     }
 
