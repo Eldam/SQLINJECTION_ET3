@@ -26,8 +26,6 @@ class Index {
             <a href=' ../Controllers/User_DELETE_Controller.php '><i class="fa fa-trash" id="userDeleteIcon" title="Delete"></i></a>
 
         </div>
-
-
     </div>
 
 

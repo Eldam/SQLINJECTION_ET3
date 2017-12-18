@@ -71,7 +71,7 @@ class User_EDIT_View
                         <input id="send" type="submit" class="button" value="Editar" onclick="comprobarVacio(this)">
                     </div>
                     <div class="backBttn">
-                        <a href="../Controllers/User_SHOWALL_Controller.php"><i class="fa fa-undo" id="returnIcon"></i></a>
+                        <a href="../Controllers/User_SHOWALL_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>
                     </div>
 
 

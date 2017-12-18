@@ -70,7 +70,7 @@ class User_SHOWCURRENT_View{
                         <input id="Direccion" name="Direccion" class="input" value="<?php echo $user['Direccion'];?>" readonly>
                     </div>
                     <div class="backBttn">
-                        <a href="../Controllers/User_SHOWALL_Controller.php"><i class="fa fa-undo" id="returnIcon"></i></a>
+                        <a href="../Controllers/User_SHOWALL_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>
                     </div>
 
 

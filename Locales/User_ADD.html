@@ -3,16 +3,14 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-<div class="CurrentFormContainer">
+<div class="AddFormContainer">
 
     <form action="../Controllers/User_ADD_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
 
         <div class="AddFormHeader">
             <h1>Añadir Usuario</h1>
         </div>
-
-
-        <div class="CurrentForm1">
+        <div class="AddForm1">
             <br>
             <div class="group">
                 <label for="login" class="label">Login*:</label>
@@ -49,10 +47,10 @@
             </div>
 
             <div class="group">
-                <input id="send" type="submit" class="button" value="Sign In" onclick="comprobarVacio(this)">
+                <input id="send" type="submit" class="button" value="Añadir" onclick="comprobarVacio(this)">
             </div>
             <div class="group">
-                <a href="../Controllers/User_SHOWALL_Controller.php"><i class="fa fa-undo" id="returnIcon"></i></a>
+                <a href="../Controllers/User_SHOWALL_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>
             </div>
         </div>
 
