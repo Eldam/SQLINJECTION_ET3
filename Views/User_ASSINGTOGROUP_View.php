@@ -24,7 +24,7 @@ class User_ASSINGTOGROUP_View {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <?php
-        echo '<h1 style="color: white;padding-left: 100px ">Se han encontrado '.mysqli_num_rows($this->response).' Grupo(s).</h1>';
+        echo '<h1 style="color: white;padding-left: 100px ">Se han encontrado '.count($this->response).' Grupo(s).</h1>';
         ?>
 
 
@@ -44,7 +44,8 @@ class User_ASSINGTOGROUP_View {
 
                         <?php
 
-                        while ($group = mysqli_fetch_array($this->response)){
+                        foreach ($this->response as $groups){
+                            $group = mysqli_fetch_array($groups);
 
                             echo "<tr>";
                             echo"<td>".$group['IdGrupo']."</td>".
