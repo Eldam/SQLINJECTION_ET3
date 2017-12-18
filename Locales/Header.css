@@ -168,10 +168,11 @@
 }
 
 #logOutIcon{
-	font-size: 1em;
-	color: #6f2f31;
+	font-size: 2em;
+	color: #dc2b39;
 }
 
 #logOutIcon:hover{
-
+	transition:all .1s linear;
+	box-shadow:0 6px 7px 0 rgba(226, 38, 0, 0.24),0 8px 25px 0 rgba(254, 0, 0, 0.95);
 }
