@@ -1,0 +1,158 @@
+.CurrentFormContainer{
+    width:100%;
+    margin:auto;
+    max-width:525px;
+    min-height:670px;
+    position:relative;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.CurrentForm1{
+    width:100%;
+    height:100%;
+    position:absolute;
+    padding:50px 70px 50px 70px;
+    background: rgba(45, 95, 191, 0.7);
+}
+.CurrentForm1 .AddFormHeader{
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    padding-left: 150px;
+    position:absolute;
+    transition:all .8s linear;
+    color: white;
+}
+.CurrentForm1 .group .check{
+    display:none;
+}
+.CurrentForm1 .tab,
+.CurrentForm1 .group .label,
+.CurrentForm1 .group .button{
+    text-transform:uppercase;
+}
+.CurrentForm1 .tab{
+    font-size:22px;
+    cursor: pointer;
+    padding-bottom:5px;
+    margin:0 15px 10px 0;
+    display:inline-block;
+    border-bottom:2px solid transparent;
+}
+.CurrentForm1 + .tab{
+    color:#27F6FF;
+    border-color:#1161ee;
+}
+
+.CurrentForm1 .group{
+    margin-bottom:15px;
+}
+.CurrentForm1 .group .label,
+.CurrentForm1 .group .input,
+.CurrentForm1 .group .button{
+    width:100%;
+    color:#fff;
+    display:block;
+}
+.CurrentForm1 .group .input,
+.CurrentForm1 .group .button{
+    border:none;
+    padding:15px 20px;
+    border-radius:25px;
+    background:rgba(255,255,255,.1);
+}
+.CurrentForm1 .group .input,
+.CurrentForm1 .group .button{
+    border:none;
+    padding:5px 20px;
+    border-radius:25px;
+    background:rgba(255,255,255,.1);
+}
+.CurrentForm1 .group input[data-type="password"]{
+    text-security:circle;
+    -webkit-text-security:circle;
+}
+.CurrentForm1 .group .label{
+    color: #ece4ef;
+    font-size:12px;
+}
+#send{
+    background: #2d5ab3;
+}
+.CurrentForm1 .group #send:hover{
+    transition:all .1s linear;
+    box-shadow: 0 0 0 3px rgba(36, 172, 232, 0.5);
+    background: #2e4b96;
+}
+.CurrentForm1 .group #send:active{
+    background: #454aff;
+    color: #fffc46;
+}
+.CurrentForm1 .group label .icon{
+    width:15px;
+    height:15px;
+    border-radius:2px;
+    position:relative;
+    display:inline-block;
+    background:rgba(255,255,255,.1);
+}
+.CurrentForm1 .group label .icon:before,
+.CurrentForm1 .group label .icon:after{
+    content:'';
+    width:10px;
+    height:2px;
+    background:#fff;
+    position:absolute;
+    transition:all .2s ease-in-out 0s;
+}
+.CurrentForm1 .group label .icon:before{
+    left:3px;
+    width:5px;
+    bottom:6px;
+    transform:scale(0) rotate(0);
+}
+.CurrentForm1 .group label .icon:after{
+    top:6px;
+    right:0;
+    transform:scale(0) rotate(0);
+}
+.CurrentForm1 .group .check:checked + label{
+    color:#fff;
+}
+.CurrentForm1 .group .check:checked + label .icon{
+    background:#1161ee;
+}
+.CurrentForm1 .group .check:checked + label .icon:before{
+    transform:scale(1) rotate(45deg);
+}
+.CurrentForm1 .group .check:checked + label .icon:after{
+    transform:scale(1) rotate(-45deg);
+}
+.CurrentForm1 .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+    transform:rotate(0);
+}
+.CurrentForm1 .sign-up:checked + .tab + .login-form .sign-up-htm{
+    transform:rotate(0);
+}
+
+.hr{
+    height:2px;
+    margin:60px 0 50px 0;
+    background:rgba(255,255,255,.2);
+}
+
+#returnIcon{
+    color: #2A6A92;
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size: 2em;
+}
+#returnIcon:hover{
+    color: #2899A9;
+}
+
+#returnIcon:visited {
+    font-size: 3em;
+    color: #6f6c6d;
+}
