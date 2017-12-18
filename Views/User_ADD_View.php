@@ -7,6 +7,9 @@ class User_ADD_View
     }
 
     function render(){
-            echo "<h1>addView!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</h1>";
+            include '../Locales/Header.html';
+            include '../Locales/LateralBarAdmin.html';
+            include '../Locales/User_ADD.html';
+            include '../Locales/Footer.html';
     }
 }

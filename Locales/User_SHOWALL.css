@@ -3,14 +3,20 @@
     border-style: dashed none none none;
     position: relative;
     padding-top: 20px;
-    padding-left: 100px;
+    align-content: center;
     margin: auto;
     margin-left: 50px;
     margin-bottom: 20px;
     color: #ffffff;
+    text-align: center;
 }
 
-table {
+.containTable{
+    display: inline-block;
+    text-align: center;
+}
+
+table{
     border: 1px solid black;
     width: 10%;
     border-collapse: collapse;
@@ -32,17 +38,63 @@ th{
     background-color: #84b5ff;
 }
 
-#backIcon{
-    margin-left: 20px;
-    margin-top: 5px;
+#returnIcon{
     font-size: 4em;
-}
-#backIcon:hover{
-    font-size: 6em;
     color: #2A6A92;
 }
+#returnIcon:hover{
+    color: #2899A9;
+}
 
-#backIcon:visited{
+#returnIcon:visited{
     font-size: 6em;
+    color: #6f6c6d;
+}
+
+h1{
+    text-align: center;
+}
+.ActionButtons{
+    padding-left: 10%;
+}
+
+#addIcon{
+    color: #2A6A92;
+    font-size: 4em;
+}
+#addIcon:hover{
+    color: #2899A9;
+}
+
+#addIcon:visited{
+    font-size: 6em;
+    color: #6f2f31;
+}
+
+#modIcon{
+    color: #6f6c6d;
+}
+#modIcon:hover{
+    color: #2899A9;
+}
+
+#modIcon:visited{
+    color: #6f2f31;
+}
+#seeIcon{
+     color: #6f6c6d;
+ }
+#seeIcon:hover{
+    color: #2899A9;
+}
+#seeIcon:visited{
+    color: #6f2f31;
+}#delIcon{
+     color: #6f6c6d;
+ }
+#delIcon:hover{
+    color: #2899A9;
+}
+#delIcon:visited{
     color: #6f6c6d;
 }

@@ -1,0 +1,69 @@
+.IndexContainer{
+    width:100%;
+    margin:auto;
+    max-width:1000px;
+    min-height:370px;
+    position:relative;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.IndexOption{
+    width:100%;
+    height:100%;
+    position:absolute;
+    padding:50px 70px 50px 70px;
+    background: rgba(115, 109, 115, 0.7);
+}
+
+#showAllIcon{
+    font-size: 8em;
+    padding-left: 5px;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+#showCurrentIcon{
+    font-size: 8em;
+    padding-left: 5px;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+#userAddIcon{
+    font-size: 8em;
+    padding-left: 5px;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+#userDeleteIcon{
+    font-size: 8em;
+    padding-left: 5px;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+#userSearchIcon{
+    font-size: 8em;
+    padding-left: 5px;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+#showAllIcon:hover{
+    color: #2899A9;
+    font-size: 8em;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(31, 204, 225, 0.69);
+}
+#showCurrentIcon:hover{
+    color: #2899A9;
+    font-size: 8em;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(31, 204, 225, 0.69);
+}
+#userAddIcon:hover{
+    color: #2899A9;
+    font-size: 8em;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(31, 204, 225, 0.69);
+}
+#userDeleteIcon:hover{
+    color: #2899A9;
+    font-size: 8em;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(31, 204, 225, 0.69);
+}
+#userSearchIcon:hover{
+    color: #2899A9;
+    font-size: 8em;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(31, 204, 225, 0.69);
+}

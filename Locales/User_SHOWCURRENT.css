@@ -14,7 +14,7 @@
     padding:50px 70px 50px 70px;
     background: rgba(45, 95, 191, 0.7);
 }
-.CurrentForm1 .AddFormHeader{
+.CurrentHeader{
     top:0;
     left:0;
     right:0;
@@ -142,17 +142,21 @@
     background:rgba(255,255,255,.2);
 }
 
+.backBttn{
+    text-align: center;
+}
+
 #returnIcon{
-    color: #2A6A92;
+    color: #929091;
     margin-left: 20px;
     margin-top: 5px;
-    font-size: 2em;
+    font-size: 4em;
 }
 #returnIcon:hover{
     color: #2899A9;
 }
 
 #returnIcon:visited{
-    font-size: 3em;
+    font-size: 6em;
     color: #6f6c6d;
 }
