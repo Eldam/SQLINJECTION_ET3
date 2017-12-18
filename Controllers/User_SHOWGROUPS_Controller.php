@@ -47,8 +47,8 @@ else {
 
 
         //se muestra la vista ShowGrups con todos los parametros obtenidos
-        include_once '../Views/User_SHOWALL_View.php';
-        new User_ASSINGTOGROUP_View($completeGoups);
+        include_once '../Views/User_SHOWGROUPS_View.php';
+        new User_SHOWGROUPS_View($completeGoups);
 
     }
 

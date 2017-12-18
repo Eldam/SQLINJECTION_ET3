@@ -215,7 +215,7 @@ class UserDAO
         if ((mysqli_num_rows($resultadoUser) == 1) && (mysqli_num_rows($resultadoGrupo) == 1)) {
             $sql = "INSERT INTO USU_GRUPO (login, IdGrupo) VALUES (".$this->login().",".$IdGrupo.");";
             mysqli_query($this->mysqli, $sql);
-            
+
 
             return "El usuario ".$this->login." ha sido asignado al grupo ".mysqli_fetch_array($resultadoGrupo)["NombreGrupo"];
 
