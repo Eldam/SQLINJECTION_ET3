@@ -19,11 +19,11 @@ class User_SHOWGROUPS_View{
         /*include './Strings_SPANISH.php';*/
         include '../Locales/Header.html';
         ?>
-        <link rel="stylesheet" href="../Locales/User_ASSINGTOGROUP.css">
+        <link rel="stylesheet" href="../Locales/User_SHOWGROUPS.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <?php
-        echo '<h1 style="color: white;padding-left: 100px ">Se han encontrado '.mysqli_num_rows($this->response).' Grupo(s).</h1>';
+        echo '<h1 style="color: white;padding-left: 100px ">Se han encontrado '.count($this->response).' Grupo(s).</h1>';
         ?>
 
 
@@ -42,20 +42,19 @@ class User_SHOWGROUPS_View{
 
                     <?php
 
-                    while ($user = mysqli_fetch_array($this->response)){
+
+                    foreach($this->response as $groups) {
+                        $group = mysqli_fetch_array($groups);
+
 
                         echo "<tr>";
-                        echo"<td>".$user['IdGrupo']."</td>".
-                            "<td>".$user['NombreGrupo']."</td>".
-                            "<td>".$user['DescripGrupo']."</td>".
-                            '<td><a href="../Controllers/User_REMOVEGROUP_Controller.php?value='.$user["login"].'"><i class="fa fa-trash" id="delIcon"></i></td></a>'.
+                        echo "<td>" . $group['IdGrupo'] . "</td>" .
+                            "<td>" . $group['NombreGrupo'] . "</td>" .
+                            "<td>" . $group['DescripGrupo'] . "</td>" .
+                            '<td><a href="../Controllers/User_REMOVEGROUP_Controller.php?IdGrupo=' . $group["IdGrupo"] . '"><i class="fa fa-trash" id="delIcon"></i></a></td>' .
                             "</tr>";
+
                     }
-
-
-
-
-
                     ?>
                 </table>
 
@@ -63,8 +62,8 @@ class User_SHOWGROUPS_View{
 
             <div class="ActionButtons">
                 <!-- <a href="../Controllers/User_SEARCH_Controller.php"><i class="fa fa-search" id="searchIcon"></i></a> -->
-                <a href="../Controllers/User_ASSINGTOGROUP_Controller.php"><i class="fa fa-plus-square" id="addIcon" title="Asignar grupo"></i></a>
-                <a href=' ../Controllers/Index_Controller.php'><i class="fa fa-arrow-circle-left " id="returnIcon" title="Volver"></i></a>
+                <a href="../Controllers/User_ASSINGTOGROUP_Controller.php?login='<?php $_REQUEST['login']?>'"><i class="fa fa-plus-square" id="addIcon" title="Asignar grupo"></i></a>
+                <a href=' ../Controllers/User_SHOWALL_Controller.php'><i class="fa fa-arrow-circle-left " id="returnIcon" title="Volver"></i></a>
             </div>
 
         </div>
