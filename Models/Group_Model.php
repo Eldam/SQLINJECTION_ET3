@@ -17,6 +17,7 @@ class GroupDAO
     //parametros: el dni, el nombre y los apellidos
     function __construct($IdGrupo)
     {
+        $this->IdGrupo = $IdGrupo;
         include_once '../Functions/Access_DB.php';
         $this->mysqli = ConnectDB();
     }
