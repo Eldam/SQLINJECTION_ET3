@@ -22,7 +22,7 @@ class User_DELETE_View{
 
         <div class="DeleteFormContainer">
 
-            <form action="../Controllers/User_DELETE_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
+            <form action="../Controllers/User_DELETE_Controller.php?confirm=yes&value=<?php echo $user['login'];?>" onsubmit="comprobarFormsVacios(this)" method="post">
 
                 <div class="DeleteFormHeader">
                     <h1>Borrar Usuario</h1>

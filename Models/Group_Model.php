@@ -1,5 +1,5 @@
 <?php
-class UserDAO
+class GroupDAO
 {
 
 
