@@ -202,6 +202,18 @@ class UserDAO
 
     }
 
+    //funcion getGrops: retorna un array de todos los grupos asignados a un user
+    function getGroups(): array {
+        $sql = "select login, IdGrupo FROM USU_GRUPO where login = '".$this->login."'";
+        $resultado = mysqli_query($this->mysqli,$sql);
+
+        $toRet = Array();
+        while ($row = mysqli_fetch_array($resultado)){
+            $toRet[] = $row["IdGrupo"];
+        }
+
+        return $toRet;
+    }
 
 
     // funcion login: realiza la comprobación de si existe el usuario en la bd y despues si la pass

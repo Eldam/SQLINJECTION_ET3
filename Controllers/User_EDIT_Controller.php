@@ -22,22 +22,22 @@ else{
     //ha de pasarse la pk en la variable value
     //de lo contrario se elimina de la BD
     if(isset($_REQUEST['value'])){
-        include '../Models/User_Model.php';
+        include_once '../Models/User_Model.php';
         $usuario = new UserDAO($_REQUEST['value'], "");
         $resultado = $usuario->GET();
 
         //Si no existe la PK solicitada se muestra mensage de error
         //de lo contrario se muestra la tabla
         if($resultado->num_rows != 1){
-            include "../Views/MESSAGE_View.php";
+            include_once "../Views/MESSAGE_View.php";
             new MESSAGE("El usuario no existe","../Controllers/User_SHOWALL_Controller.php");
         }else{
-            include '../Views/User_EDIT_View.php';
+            include_once '../Views/User_EDIT_View.php';
             new User_EDIT_View($resultado);
         }
 
     }else{
-        include '../Models/User_Model.php';
+        include_once '../Models/User_Model.php';
 
         $login = $_REQUEST['login'];
         $password = $_REQUEST['password'];
@@ -55,7 +55,7 @@ else{
         $usuario->setData($DNI,$Nombre,$Apellidos,$Telefono,$Correo,$Direccion);
 
         $message = $usuario->EDIT();
-        include "../Views/MESSAGE_View.php";
+        include_once "../Views/MESSAGE_View.php";
         new MESSAGE($message,"../Controllers/User_SHOWALL_Controller.php");
     }
 

@@ -2,14 +2,14 @@
 //session
 session_start();
 //incluir funcion autenticacion
-include '../Functions/Authentication.php';
+include_once '../Functions/Authentication.php';
 //si no esta autenticado
 if (!IsAuthenticated()){
     header('Location: ./index.php');
 }
 //esta autenticado
 else{
-    include '../Views/index_View.php';
+    include_once '../Views/index_View.php';
     new Index();
 }
 
