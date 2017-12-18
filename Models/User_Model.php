@@ -148,12 +148,9 @@ class UserDAO
     {
         $sql = "select * from USUARIO where login = '".$this->login."'";
         $resultado = mysqli_query($this->mysqli,$sql);
-        $sql = "select * from USUARIO where Correo = '".$this->Correo."'";
-        $resultadoEmail = mysqli_query($this->mysqli,$sql);
-        $sql = "select * from USUARIO where DNI = '".$this->DNI."'";
-        $resultadoDNI = mysqli_query($this->mysqli,$sql);
 
-        if ((mysqli_num_rows($resultado) == 1) && (mysqli_num_rows($resultadoEmail) + mysqli_num_rows($resultadoDNI)) == 0) {
+
+        if (mysqli_num_rows($resultado) == 1) {
             $sql = "UPDATE USUARIO SET 
             		password = '" . $this->password .
                 "',DNI = '" . $this->DNI .
@@ -167,17 +164,7 @@ class UserDAO
             return "El usuario ha sido Actualizado";
 
         } else {
-            $responseMessage = '';
-            if(mysqli_num_rows($resultado) != 1){
-                $responseMessage =  $responseMessage ."El login no existe";
-            }
-            if(mysqli_num_rows($resultadoEmail) != 0){
-                $responseMessage =  $responseMessage ."El email ya existe";
-            }
-            if (mysqli_num_rows($resultadoDNI) != 0) {
-                $responseMessage =  $responseMessage ."El DNI ya existe";
-            }
-            return $responseMessage;
+            return "El login no existe";
         }
     }
 
