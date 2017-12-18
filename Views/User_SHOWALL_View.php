@@ -30,6 +30,7 @@ class User_SHOWALL_View {
                             <th>email</th>
                             <th>nombre</th>
                             <th>apellidos</th>
+                            <th>Gestionar grupos</th>
                             <th>Modificar</th>
                             <th>ver</th>
                             <th>borrar</th>
@@ -46,6 +47,7 @@ class User_SHOWALL_View {
                                 "<td>".$user['Correo']."</td>".
                                 "<td>".$user['Nombre']."</td>".
                                 "<td>".$user['Apellidos']."</td>".
+                                '<td><a href="../Controllers/User_SHOWGROUPS_Controller.php?value='.$user["login"].'"><i class="fa fa-users" id="modIcon"></i></td></a>'.
                                 '<td><a href="../Controllers/User_EDIT_Controller.php?value='.$user["login"].'"><i class="fa fa-pencil-square-o" id="modIcon"></i></td></a>'.
                                 '<td><a href="../Controllers/User_SHOWCURRENT_Controller.php?value='.$user["login"].'"><i class="fa fa-eye" id="seeIcon"></i></td></a>'.
                                 '<td><a href="../Controllers/User_DELETE_Controller.php?value='.$user["login"].'"><i class="fa fa-trash" id="delIcon"></i></td></a>'.

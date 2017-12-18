@@ -1,11 +1,12 @@
 body{
+    margin: 0;
     background-color: #e0e0e0;
     background-image: url("../Locales/wallpaper.jpg");
 
 }
 
 .lateralBar{
-    top: 0px;
+    top: 0;
     position: fixed ;
 }
 

@@ -142,6 +142,10 @@
     background:rgba(255,255,255,.2);
 }
 
+.backBttn{
+    text-align: center;
+}
+
 #returnIcon{
     color: #929091;
     margin-left: 20px;
@@ -155,4 +159,13 @@
 #returnIcon:visited{
     font-size: 6em;
     color: #6f6c6d;
+}
+
+#send{
+    font-size: 2em;
+    color: #a5a1a2;
+}
+#send:hover{
+    transition:all .1s linear;
+    color: #d0bd54;
 }

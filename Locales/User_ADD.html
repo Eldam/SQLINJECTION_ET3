@@ -46,10 +46,10 @@
                 <input id="Direccion" name="Correo" class="input" required onchange="comprobarVacio(this);comprobarAlfabetico(this,9)">
             </div>
 
-            <div class="group">
-                <input id="send" type="submit" class="button" value="Añadir" onclick="comprobarVacio(this)">
+            <div class="group" id="sendDiv">
+                <button id="send" type="submit" class="fa fa-plus-circle button" value="" title="AÑADIR" onclick="comprobarVacio(this)"></button>
             </div>
-            <div class="group">
+            <div class="backBttn">
                 <a href="../Controllers/User_SHOWALL_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>
             </div>
         </div>
