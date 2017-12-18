@@ -8,9 +8,11 @@
 
 class User_SHOWGROUPS_View{
     var $response;
+    var $login;
 
-    function __construct($response){
+    function __construct($response,$login){
         $this->response = $response;
+        $this->login = $login;
         $this->render();
     }
 
@@ -62,7 +64,7 @@ class User_SHOWGROUPS_View{
 
             <div class="ActionButtons">
                 <!-- <a href="../Controllers/User_SEARCH_Controller.php"><i class="fa fa-search" id="searchIcon"></i></a> -->
-                <a href="../Controllers/User_ASSINGTOGROUP_Controller.php?login='<?php $_REQUEST['login']?>'"><i class="fa fa-plus-square" id="addIcon" title="Asignar grupo"></i></a>
+                <a href="../Controllers/User_ASSINGTOGROUP_Controller.php?login='<?php $this->login ?>'"><i class="fa fa-plus-square" id="addIcon" title="Asignar grupo"></i></a>
                 <a href=' ../Controllers/User_SHOWALL_Controller.php'><i class="fa fa-arrow-circle-left " id="returnIcon" title="Volver"></i></a>
             </div>
 
