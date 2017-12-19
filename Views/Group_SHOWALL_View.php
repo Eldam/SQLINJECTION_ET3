@@ -51,7 +51,7 @@ class Group_SHOWALL_View{
                         echo"<td>".$group['IdGrupo']."</td>".
                             "<td>".$group['NombreGrupo']."</td>".
                             "<td>".$group['DescripGrupo']."</td>".
-                            '<td><a href="../Controllers/Group_ASSINGACTIONFUNCTION_Controller.php?login='.$group["IdGrupo"].'"><i class="fa fa-users" id="modIcon"></i></td></a>'.
+                            '<td><a href="../Controllers/Group_ASSINGACTIONFUNCTION_Controller.php?IdGrupo='.$group["IdGrupo"].'getAll=yes"><i class="fa fa-users" id="modIcon"></i></td></a>'.
                             '<td><a href="../Controllers/Group_EDIT_Controller.php?value='.$group["IdGrupo"].'"><i class="fa fa-pencil-square-o" id="modIcon"></i></td></a>'.
                             '<td><a href="../Controllers/Group_SHOWCURRENT_Controller.php?value='.$group["IdGrupo"].'"><i class="fa fa-eye" id="seeIcon"></i></td></a>'.
                             '<td><a href="../Controllers/Group_DELETE_Controller.php?value='.$group["IdGrupo"].'"><i class="fa fa-trash" id="delIcon"></i></td></a>'.
