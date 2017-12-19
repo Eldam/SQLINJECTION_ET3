@@ -213,11 +213,10 @@ class UserDAO
 
 
         if ((mysqli_num_rows($resultadoUser) == 1) && (mysqli_num_rows($resultadoGrupo) == 1)) {
-            $sql = "DELETE FROM USU_GRUPO where login =".$this->login()." AND IdGrupo=".$IdGrupo.";";
+            $sql = "INSERT INTO USU_GRUPO (login, IdGrupo) VALUES ('".$this->login."','".$IdGrupo."');";
             mysqli_query($this->mysqli, $sql);
 
-
-            return "El usuario ".$this->login." ha sido asignado al grupo ".mysqli_fetch_array($resultadoGrupo)["NombreGrupo"];
+            return "El usuario ".$this->login." ha sido asignado a ".mysqli_fetch_array($resultadoGrupo)["NombreGrupo"];
 
         } else {
 
@@ -243,11 +242,12 @@ class UserDAO
 
 
         if ((mysqli_num_rows($resultadoUser) == 1) && (mysqli_num_rows($resultadoGrupo) == 1)) {
-            $sql = "INSERT INTO USU_GRUPO (login, IdGrupo) VALUES (".$this->login().",".$IdGrupo.");";
+            $sql = "DELETE FROM USU_GRUPO where login ='".$this->login()."' AND IdGrupo='".$IdGrupo."';";
             mysqli_query($this->mysqli, $sql);
+            echo $sql;
 
 
-            return "El usuario ".$this->login." ha sido eliminado del grupo ".$IdGrupo;
+            return "El usuario ".$this->login." ha sido eliminado de ".$IdGrupo;
 
         } else {
 

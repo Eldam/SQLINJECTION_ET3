@@ -28,7 +28,8 @@ else {
         //se obtiene todos los grupos que a los que no pertence el usuario
         //y se muestran en la vista ASSINGTOGROUP
         //de lo contrario se asigna el usuario a los grupos solicitados
-        if(!isset($_REQUEST["getGroups"])) {
+        if(isset($_REQUEST["getGroups"])) {
+
 
             //Se crea un DAO con la PK
             //y se obtiene la lista de grupos a los que pertenece
@@ -53,22 +54,46 @@ else {
                 }
             }
 
-
             //se muestra la vista ASSINGTOGROUP con todos los parametros obtenidos
             include_once '../Views/User_ASSINGTOGROUP_View.php';
-            new User_ASSINGTOGROUP_View($notUserGroups);
+            new User_ASSINGTOGROUP_View($notUserGroups,$_REQUEST['login']);
 
 
 
         }else{
+
+        //Se comprueba si se ha solicitado la asignacion de algun grupo
+        if(isset($_REQUEST["arrayGroup"])) {
+            //en caso afirmativo
             //se asigna el usuario a los grupos solicitados
             //Se crea un DAO con la PK
             include_once '../Models/User_Model.php';
-            $message = (new UserDAO($_REQUEST['login'], ""))->assingGroup($_REQUEST['IdGrupo']);
+            $message = "";
+            $userDAO = new UserDAO($_REQUEST['login'], "");
+            echo "<br><h1 style='color: red'> " . "" . $_REQUEST['login'] . "beneeeee</h1><br>";
+            //Se recorre por todos los grupos solicitados
+            //asignando al usuario a cada uno de ellos
+            //concatenando los mensages de repsuesta para mostrar
+            foreach ($_REQUEST['arrayGroup'] as $group) {
+
+                $message = $message . "<br>" . ($userDAO->assingGroup($group));
+
+            }
+
 
             include_once "../Views/MESSAGE_View.php";
-            new MESSAGE($message, "../Controllers/User_SHOWGROUPS_Controller.php?login=".$_REQUEST['login']);
+            new MESSAGE($message, "../Controllers/User_SHOWGROUPS_Controller.php?login=" . $_REQUEST['login']);
 
+
+        }else{
+
+            //En el caso de que no se halla solicitado ningun grupo
+            //se muestra mensage de aleta
+
+            include_once "../Views/MESSAGE_View.php";
+            new MESSAGE("No se ha selecionado ningun grupo", "../Controllers/User_ASSINGTOGROUP_Controller.php?getGroups=true&login=" . $_REQUEST['login']);
+
+        }
 
 
 

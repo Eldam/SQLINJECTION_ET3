@@ -8,10 +8,12 @@
 
 class User_ASSINGTOGROUP_View {
 
-    var $response;
+    var $response;//Recortset de reupo de usuario
+    var $login;  //login del ususario
 
-    function __construct($response){
+    function __construct($response,$login){
         $this->response = $response;
+        $this->login = $login;
         $this->render();
     }
 
@@ -32,7 +34,7 @@ class User_ASSINGTOGROUP_View {
         <div class="tableShowGroup">
 
             <div class="containGroups">
-                <form action="../Controllers/User_ASSINGTOGROUP_Controller.php" method="post">
+                <form action="../Controllers/User_ASSINGTOGROUP_Controller.php?login=<?php echo $this->login?>" method="post">
                     <table class="table">
                         <tr>
                             <th>ID grupo</th>

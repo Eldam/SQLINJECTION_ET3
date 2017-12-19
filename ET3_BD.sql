@@ -313,6 +313,8 @@ INSERT INTO `GRUPO`(`IdGrupo`, `NombreGrupo`, `DescripGrupo`) VALUES ("ALUMNS","
 "Permite las funcionalidades del basicas del sitema");
 INSERT INTO `GRUPO`(`IdGrupo`, `NombreGrupo`, `DescripGrupo`) VALUES ("MAXCAR","Grupo de CHARS",
 "Permite las funcionalidades del basicas del sitema,Permite las funcionalidades del basicas de sitema");
+INSERT INTO `GRUPO`(`IdGrupo`, `NombreGrupo`, `DescripGrupo`) VALUES ("TEST","Grupo de testers",
+"Permite las funcionalidades del basicas del sitema,Permite las funcionalidades del basicas de sitema");
 
 
 #Insert USU_GRUPO
