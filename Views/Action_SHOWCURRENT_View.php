@@ -18,7 +18,7 @@ class Action_SHOWCURRENT_View{
 
         /*include './Strings_SPANISH.php';*/
         include '../Locales/Header.html';
-        include '../Locales/LateralBarAdmin.html';
+        include '../Locales/LateralBar.php';
         $action = mysqli_fetch_array($this->response);
         ?>
 

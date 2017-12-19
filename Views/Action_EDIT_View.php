@@ -16,7 +16,7 @@ class Action_EDIT_View{
 
     function render(){
         include '../Locales/Header.html';
-        include '../Locales/LateralBarAdmin.html';
+        include '../Locales/LateralBar.php';
         $action = mysqli_fetch_array($this->response);
         ?>
         <meta charset="utf-8">

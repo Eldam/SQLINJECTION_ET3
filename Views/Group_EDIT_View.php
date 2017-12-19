@@ -17,7 +17,7 @@ class Group_EDIT_View
 
     function render(){
         include '../Locales/Header.html';
-        include '../Locales/LateralBarAdmin.html';
+        include '../Locales/LateralBar.php';
         $group = mysqli_fetch_array($this->response);
         ?>
         <meta charset="utf-8">

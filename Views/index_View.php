@@ -9,7 +9,7 @@ class Index {
     function render(){
 
         include '../Locales/Header.html';
-        include '../Locales/LateralBarUser.html';
+        include '../Locales/LateralBar.php';
 ?>
     <div class="IndexContainer">
 

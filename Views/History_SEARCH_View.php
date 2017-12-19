@@ -16,7 +16,7 @@ class History_SEARCH_View
     function render()
     {
         include '../Locales/Header.html';
-        include '../Locales/LateralBarAdmin.html';
+        include '../Locales/LateralBar.php';
         include '../Locales/History_SEARCH.html';
         include '../Locales/Footer.html';
     }

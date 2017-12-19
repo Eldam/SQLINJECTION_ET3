@@ -14,7 +14,7 @@ class Group_ADD_View
 
     function render(){
         include '../Locales/Header.html';
-        include '../Locales/LateralBarAdmin.html';
+        include '../Locales/LateralBar.php';
         include '../Locales/Group_ADD.html';
         include '../Locales/Footer.html';
     }

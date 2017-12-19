@@ -16,7 +16,7 @@ class History_ADD_View
 
     function render(){
         include '../Locales/Header.html';
-        include '../Locales/LateralBarAdmin.html';
+        include '../Locales/LateralBar.php';
 ?>
 
         <meta charset="utf-8">
@@ -29,7 +29,7 @@ class History_ADD_View
             <form action="../Controllers/History_ADD_Controller.php?idTrabajo=<?php echo $this->idTrabajo ?>" onsubmit="comprobarFormsVacios(this)" method="post">
 
                 <div class="AddFormHeader">
-                    <h1>Añadir Historia</h1>
+                    <h1>Aï¿½adir Historia</h1>
                 </div>
                 <div class="AddForm1">
                     <br>
@@ -40,7 +40,7 @@ class History_ADD_View
                     </div>
 
                     <div class="group" id="sendDiv">
-                        <button id="send" type="submit" class="fa fa-plus-circle button" value="" title="AÑADIR" onclick="comprobarVacio(this)"></button>
+                        <button id="send" type="submit" class="fa fa-plus-circle button" value="" title="Aï¿½ADIR" onclick="comprobarVacio(this)"></button>
                     </div>
                     <div class="backBttn">
                         <a href="../Controllers/Index_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>

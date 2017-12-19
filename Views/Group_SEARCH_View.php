@@ -16,7 +16,7 @@ class Group_SEARCH_View
     function render()
     {
         include '../Locales/Header.html';
-        include '../Locales/LateralBarAdmin.html';
+        include '../Locales/LateralBar.php';
         include '../Locales/Group_SEARCH.html';
         include '../Locales/Footer.html';
     }
