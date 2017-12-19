@@ -325,6 +325,7 @@ INSERT INTO `USU_GRUPO`(`login`, `IdGrupo`) VALUES ("alumno","ALUMNS");
 #Insert FUNCIONALIDAD
 INSERT INTO `FUNCIONALIDAD`(`IdFuncionalidad`, `NombreFuncionalidad`, `DescripFuncionalidad`) VALUES ("USERS","GESTIONAR USUARIOS","Permite admisistrar a los difentes usuarios del sistema");
 INSERT INTO `FUNCIONALIDAD`(`IdFuncionalidad`, `NombreFuncionalidad`, `DescripFuncionalidad`) VALUES ("GROUPS","GESTIONAR GRUPOS","Permite admisistrar a los difentes grupos de usuarios del sistema");
+INSERT INTO `FUNCIONALIDAD`(`IdFuncionalidad`, `NombreFuncionalidad`, `DescripFuncionalidad`) VALUES ("PERMIS","GESTIONAR PERMISOS","Permite admisistrar a los difentes permisos del sistema");
 
 
 #Insert ACCION
@@ -352,6 +353,8 @@ INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("GROUPS","EDIT"
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("GROUPS","DELETE");
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("GROUPS","SEARCH");
 
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("PERMIS","ACESS");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("PERMIS","SEARCH");
 
 #Insert PERMISO
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","USERS","ADD");
@@ -368,9 +371,10 @@ INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS"
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","GROUPS ","SEARCH");
 
 
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","PERMIS","ACESS");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","PERMIS ","SEARCH");
+
 */
-
-
 
 
 

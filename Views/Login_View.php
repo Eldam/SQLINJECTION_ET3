@@ -11,7 +11,6 @@ class Login{
     function render(){
 
         include '../Locales/Header.html';
-        include '../Locales/LateralBarUser.html';
         include '../Locales/Login.php';
         include '../Locales/Footer.html';
     } //fin metodo render

@@ -14,14 +14,14 @@
         <nav class="navigation">
             <ul class="line">
                 <li class="line2">
-                    <a href="#"><i class="fa fa-home"></i>Home</a>
+                    <a href="../Controllers/Index_Controller.php"><i class="fa fa-home"></i>Home</a>
                 </li>
 
 
                 <?php if(hasPermisionsTo("USERS","ADD")){?>
 
                     <li class="line2">
-                        <a href="#"><i class="fa fa-user-plus"></i>Add User</a>
+                        <a href="../Controllers/User_ADD_Controller.php"><i class="fa fa-user-plus"></i>Add user</a>
                     </li>
 
                 <?php } ?>
@@ -30,28 +30,68 @@
                 <?php if(hasPermisionsTo("USERS","ACESS")){?>
 
                     <li class="line2">
-                        <a href="#"><i class="fa fa-folder-open"></i>Generate QA</a>
+                        <a href="../Controllers/User_SHOWALL_Controller.php"><i class="fa fa-globe"></i>Show all users</a>
                     </li>
 
                 <?php } ?>
 
-
-                <?php if(hasPermisionsTo("USERS","EDIT")){?>
+                <?php if(hasPermisionsTo("USERS","SEARCH")){?>
 
                     <li class="line2">
-                        <a href="#"><i class="fa fa-users"></i>Generate Group</a>
+                        <a href="../Controllers/User_SEARCH_Controller.php"><i class="fa fa-search"></i>Search user</a>
                     </li>
 
                 <?php } ?>
 
+                <!------------------------------------------------------------------------------------------------------------------------>
 
-                <?php if(hasPermisionsTo("USERS","DELETE")){?>
+                <?php if(hasPermisionsTo("GROUPS","ADD")){?>
 
                     <li class="line2">
-                        <a href="#"><i class="fa fa-user-plus"></i>Add User</a>
+                        <a href="../Controllers/Group_ADD_Controller.php"><i class="fa fa-users"></i>Add group</a>
                     </li>
 
                 <?php } ?>
+
+
+                <?php if(hasPermisionsTo("GROUPS","ACESS")){?>
+
+                    <li class="line2">
+                        <a href="../Controllers/Group_SHOWALL_Controller.php"><i class="fa fa-globe"></i>Show all groups</a>
+                    </li>
+
+                <?php } ?>
+
+                <?php if(hasPermisionsTo("GROUPS","SEARCH")){?>
+
+                    <li class="line2">
+                        <a href="../Controllers/Group_SEARCH_Controller.php"><i class="fa fa-search"></i>Search group</a>
+                    </li>
+
+                <?php } ?>
+
+                <!------------------------------------------------------------------------------------------------------------------------>
+
+
+
+                <?php if(hasPermisionsTo("PERMIS","ACESS")){?>
+
+                    <li class="line2">
+                        <a href="../Controllers/Permission_SHOWALL_Controller.php"><i class="fa fa-globe"></i>Show all permissions</a>
+                    </li>
+
+                <?php } ?>
+
+                <?php if(hasPermisionsTo("PERMIS","SEARCH")){?>
+
+                    <li class="line2">
+                        <a href="../Controllers/Permission_SEARCH_Controller.php"><i class="fa fa-search"></i>Search permission</a>
+                    </li>
+
+                <?php } ?>
+
+                <!------------------------------------------------------------------------------------------------------------------------>
+
 
 
 
