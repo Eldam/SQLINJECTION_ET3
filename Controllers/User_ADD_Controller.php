@@ -46,13 +46,18 @@ else{
             $usuario = new UserDAO($login, $password);
             $usuario->setData($DNI, $Nombre, $Apellidos, $Telefono, $Correo, $Direccion);
 
+            //Se añade el usuario
             $respuesta = $usuario->ADD();
+
+            //Se le asigna por defceto al grupo ALUMNOS
+            $usuario->assingGroup("ALUMNS");
 
             //Si la respuesta es "true" se muestra mensage de Confirmacion
             // de lo contrario el error correspondiente
             if ($respuesta == 'true') {
                 include_once '../Views/MESSAGE_View.php';
-                new MESSAGE("Usuario creado correctamente.", '../Controllers/User_SHOWALL_Controller.php');
+                new MESSAGE("Usuario creado correctamente (Asignado por defecto al grupo ALUMNOS).",
+                                        '../Controllers/User_SHOWALL_Controller.php');
             } else {
                 include_once '../Views/MESSAGE_View.php';
                 new MESSAGE($respuesta, '../Controllers/User_SHOWALL_Controller.php');

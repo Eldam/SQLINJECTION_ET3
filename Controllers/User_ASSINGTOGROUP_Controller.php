@@ -27,7 +27,7 @@ else {
         //Si la variable getGroups esta asignada
         //se obtiene todos los grupos que a los que no pertence el usuario
         //y se muestran en la vista ASSINGTOGROUP
-        //de lo contrario asigna el usuario a los grupos solicitados
+        //de lo contrario se asigna el usuario a los grupos solicitados
         if(!isset($_REQUEST["getGroups"])) {
 
             //Se crea un DAO con la PK
@@ -61,11 +61,17 @@ else {
 
 
         }else{
+            //se asigna el usuario a los grupos solicitados
             //Se crea un DAO con la PK
             include_once '../Models/User_Model.php';
-            $userDAO = new UserDAO($_REQUEST['login'], "");
+            $message = (new UserDAO($_REQUEST['login'], ""))->assingGroup($_REQUEST['IdGrupo']);
 
-            
+            include_once "../Views/MESSAGE_View.php";
+            new MESSAGE($message, "../Controllers/User_SHOWGROUPS_Controller.php?login=".$_REQUEST['login']);
+
+
+
+
 
         }
 

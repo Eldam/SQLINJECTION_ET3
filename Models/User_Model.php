@@ -213,7 +213,7 @@ class UserDAO
 
 
         if ((mysqli_num_rows($resultadoUser) == 1) && (mysqli_num_rows($resultadoGrupo) == 1)) {
-            $sql = "INSERT INTO USU_GRUPO (login, IdGrupo) VALUES (".$this->login().",".$IdGrupo.");";
+            $sql = "DELETE FROM USU_GRUPO where login =".$this->login()." AND IdGrupo=".$IdGrupo.";";
             mysqli_query($this->mysqli, $sql);
 
 
@@ -232,6 +232,37 @@ class UserDAO
             return $responseMessage;
         }
     }
+
+    //funcion getGrops: asigna el grupo al usuario solicitado
+    function removeGroup(string $IdGrupo): string {
+        $sql = "select * from USUARIO where login = '".$this->login."'";
+        $resultadoUser = mysqli_query($this->mysqli,$sql);
+
+        $sql = "select * from GRUPO where IdGrupo = '".$IdGrupo."'";
+        $resultadoGrupo = mysqli_query($this->mysqli,$sql);
+
+
+        if ((mysqli_num_rows($resultadoUser) == 1) && (mysqli_num_rows($resultadoGrupo) == 1)) {
+            $sql = "INSERT INTO USU_GRUPO (login, IdGrupo) VALUES (".$this->login().",".$IdGrupo.");";
+            mysqli_query($this->mysqli, $sql);
+
+
+            return "El usuario ".$this->login." ha sido eliminado del grupo ".$IdGrupo;
+
+        } else {
+
+            $responseMessage = '';
+            if(mysqli_num_rows($resultadoUser) == 0){
+                $responseMessage =  $responseMessage ."El usuario no existe";
+            }
+            if(mysqli_num_rows($resultadoGrupo) == 0){
+                $responseMessage =  $responseMessage ."El Grupo no existe";
+            }
+
+            return $responseMessage;
+        }
+    }
+
 
 
 
