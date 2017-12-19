@@ -54,7 +54,7 @@ class Function_DELETE_View{
                         <input id="send" type="submit" class="button" value="BORRAR" onclick="comprobarVacio(this)">
                     </div>
                     <div class="backBttn">
-                        <a href="../Controllers/User_SHOWALL_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>
+                        <a href="../Controllers/Function_SHOWALL_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>
                     </div>
 
 

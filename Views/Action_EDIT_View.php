@@ -3,11 +3,10 @@
  * Created by PhpStorm.
  * User: osboxes
  * Date: 12/16/17
- * Time: 4:38 PM
+ * Time: 4:40 PM
  */
 
-class Function_EDIT_View
-{
+class Action_EDIT_View{
     var $response;
 
     function __construct($response){
@@ -18,33 +17,33 @@ class Function_EDIT_View
     function render(){
         include '../Locales/Header.html';
         include '../Locales/LateralBarAdmin.html';
-        $function = mysqli_fetch_array($this->response);
+        $action = mysqli_fetch_array($this->response);
         ?>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../Locales/Function_EDIT.css">
+        <link rel="stylesheet" href="../Locales/Action_EDIT.css">
 
 
         <div class="EditFormContainer">
 
-            <form action="../Controllers/Function_EDIT_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
+            <form action="../Controllers/Accion_EDIT_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
 
                 <div class="EditFormHeader">
-                    <h1>Editar Funcionalidad</h1>
+                    <h1>Editar Accion</h1>
                 </div>
 
                 <div class="EditForm1">
                     <br>
                     <div class="group">
-                        <label for="IdFuncionalidad" class="label">Id Funcionalidad*:</label>
-                        <input id="IdFuncionalidad" name="IdFuncionalidad"  type="text" class="input" value="<?php echo $function['IdFuncionalidad'];?>" readonly>
+                        <label for="IdAccion" class="label">IdAccion*:</label>
+                        <input id="IdAccion" name="IdAccion"  type="text" class="input" value="<?php echo $action['IdAccion'];?>" readonly>
                     </div>
                     <div class="group">
-                        <label for="NombreFuncionalidad" class="label">Nombre Funcionalidad*:</label>
-                        <input id="NombreFuncionalidad" name="NombreFuncionalidad" type="text" class="input" value="<?php echo $function['NombreFuncionalidad'];?>" onclick="comprobarVacio(this); comprobarAlfabetico(this,60)">
+                        <label for="NombreAccion" class="label">Nombre Accion*:</label>
+                        <input id="NombreAccion" name="NombreAccion" type="text" class="input" value="<?php echo $action['NombreAccion'];?>" onclick="comprobarVacio(this); comprobarAlfabetico(this,60)">
                     </div>
                     <div class="group">
-                        <label for="DescripFuncionalidad" class="label">DescripFuncionalidad*:</label>
-                        <input id="DescripFuncionalidad" name="DescripFuncionalidad" type="text" class="input" value="<?php echo $function['DescripFuncionalidad'];?>" onclick="comprobarVacio(this); comprobarAlfabetico(this,100)">
+                        <label for="DescripAccion" class="label">Descripcion Accion*:</label>
+                        <input id="DescripAccion" name="DescripAccion" type="text" class="input" value="<?php echo $action['DescripAccion'];?>" onclick="comprobarVacio(this); comprobarAlfabetico(this,100)">
                     </div>
 
                     <div class="group">

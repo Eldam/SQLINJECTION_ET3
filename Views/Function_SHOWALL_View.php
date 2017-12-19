@@ -87,4 +87,3 @@ class Function_SHOWALL_View{
 }
 
 ?>
-}

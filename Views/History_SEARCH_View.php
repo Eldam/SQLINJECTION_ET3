@@ -8,5 +8,16 @@
 
 class History_SEARCH_View
 {
+    function __construct()
+    {
+        $this->render();
+    }
 
+    function render()
+    {
+        include '../Locales/Header.html';
+        include '../Locales/LateralBarAdmin.html';
+        include '../Locales/History_SEARCH.html';
+        include '../Locales/Footer.html';
+    }
 }
