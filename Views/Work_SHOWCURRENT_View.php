@@ -3,10 +3,10 @@
  * Created by PhpStorm.
  * User: osboxes
  * Date: 12/16/17
- * Time: 4:48 PM
+ * Time: 4:49 PM
  */
 
-class ET_ADD_View
+class Work_SHOWCURRENT_View
 {
 
 }

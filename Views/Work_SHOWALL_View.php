@@ -6,7 +6,7 @@
  * Time: 4:49 PM
  */
 
-class ET_SHOWALL_View
+class Work_SHOWALL_View
 {
 
 }

@@ -6,7 +6,7 @@
  * Time: 4:49 PM
  */
 
-class ET_DELETE_View
+class Work_DELETE_View
 {
 
 }

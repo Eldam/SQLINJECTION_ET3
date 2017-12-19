@@ -6,7 +6,7 @@
  * Time: 4:48 PM
  */
 
-class ET_EDIT_view
+class Work_SEARCH_View
 {
 
 }
