@@ -1,4 +1,4 @@
-.DeleteFormContainer{
+.AddFormContainer{
     width:100%;
     margin:auto;
     max-width:525px;
@@ -7,14 +7,14 @@
     box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 
-.DeleteForm1{
+.AddForm1{
     width:100%;
     height:100%;
     position:absolute;
     padding:50px 70px 50px 70px;
     background: rgba(45, 95, 191, 0.7);
 }
-.DeleteFormHeader{
+.AddFormHeader{
     top:0;
     left:0;
     right:0;
@@ -24,15 +24,15 @@
     transition:all .8s linear;
     color: white;
 }
-.DeleteForm1 .group .check{
+.AddForm1 .group .check{
     display:none;
 }
-.DeleteForm1 .tab,
-.DeleteForm1 .group .label,
-.DeleteForm1 .group .button{
+.AddForm1 .tab,
+.AddForm1 .group .label,
+.AddForm1 .group .button{
     text-transform:uppercase;
 }
-.DeleteForm1 .tab{
+.AddForm1 .tab{
     font-size:22px;
     cursor: pointer;
     padding-bottom:5px;
@@ -40,56 +40,56 @@
     display:inline-block;
     border-bottom:2px solid transparent;
 }
-.DeleteForm1 + .tab{
+.AddForm1 + .tab{
     color:#27F6FF;
     border-color:#1161ee;
 }
 
-.DeleteForm1 .group{
+.AddForm1 .group{
     margin-bottom:15px;
 }
-.DeleteForm1 .group .label,
-.DeleteForm1 .group .input,
-.DeleteForm1 .group .button{
+.AddForm1 .group .label,
+.AddForm1 .group .input,
+.AddForm1 .group .button{
     width:100%;
     color:#fff;
     display:block;
 }
-.DeleteForm1 .group .input,
-.DeleteForm1 .group .button{
+.AddForm1 .group .input,
+.AddForm1 .group .button{
     border:none;
     padding:15px 20px;
     border-radius:25px;
     background:rgba(255,255,255,.1);
 }
-.DeleteForm1 .group .input,
-.DeleteForm1 .group .button{
+.AddForm1 .group .input,
+.AddForm1 .group .button{
     border:none;
     padding:5px 20px;
     border-radius:25px;
     background:rgba(255,255,255,.1);
 }
-.DeleteForm1 .group input[data-type="password"]{
+.CurrentForm1 .group input[data-type="password"]{
     text-security:circle;
     -webkit-text-security:circle;
 }
-.DeleteForm1 .group .label{
+.AddForm1 .group .label{
     color: #ece4ef;
     font-size:12px;
 }
 #send{
-    background: #b32529;
+    background: #2d5ab3;
 }
-.DeleteForm1 .group #send:hover{
+.AddForm1 .group #send:hover{
     transition:all .1s linear;
-    box-shadow:0 12px 15px 0 rgba(0, 0, 0, 0.24),0 17px 50px 0 rgba(254, 0, 0, 0.95);
-    background: #ea0000;
+    box-shadow: 0 0 0 3px rgba(36, 172, 232, 0.5);
+    background: #2e4b96;
 }
-.DeleteForm1 .group #send:active{
+.AddForm1 .group #send:active{
     background: #454aff;
     color: #fffc46;
 }
-.DeleteForm1 .group label .icon{
+.AddForm1 .group label .icon{
     width:15px;
     height:15px;
     border-radius:2px;
@@ -97,8 +97,8 @@
     display:inline-block;
     background:rgba(255,255,255,.1);
 }
-.DeleteForm1 .group label .icon:before,
-.DeleteForm1 .group label .icon:after{
+.AddForm1 .group label .icon:before,
+.AddForm1 .group label .icon:after{
     content:'';
     width:10px;
     height:2px;
@@ -106,33 +106,33 @@
     position:absolute;
     transition:all .2s ease-in-out 0s;
 }
-.DeleteForm1 .group label .icon:before{
+.AddForm1 .group label .icon:before{
     left:3px;
     width:5px;
     bottom:6px;
     transform:scale(0) rotate(0);
 }
-.DeleteForm1 .group label .icon:after{
+.AddForm1 .group label .icon:after{
     top:6px;
     right:0;
     transform:scale(0) rotate(0);
 }
-.DeleteForm1 .group .check:checked + label{
+.AddForm1 .group .check:checked + label{
     color:#fff;
 }
-.DeleteForm1 .group .check:checked + label .icon{
+.AddForm1 .group .check:checked + label .icon{
     background:#1161ee;
 }
-.DeleteForm1 .group .check:checked + label .icon:before{
+.AddForm1 .group .check:checked + label .icon:before{
     transform:scale(1) rotate(45deg);
 }
-.DeleteForm1 .group .check:checked + label .icon:after{
+.AddForm1 .group .check:checked + label .icon:after{
     transform:scale(1) rotate(-45deg);
 }
-.DeleteForm1 .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+.AddForm1 .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
     transform:rotate(0);
 }
-.DeleteForm1 .sign-up:checked + .tab + .login-form .sign-up-htm{
+.AddForm1 .sign-up:checked + .tab + .login-form .sign-up-htm{
     transform:rotate(0);
 }
 
@@ -159,4 +159,13 @@
 #returnIcon:visited{
     font-size: 6em;
     color: #6f6c6d;
+}
+
+#send{
+    font-size: 2em;
+    color: #a5a1a2;
+}
+#send:hover{
+    transition:all .1s linear;
+    color: #d0bd54;
 }

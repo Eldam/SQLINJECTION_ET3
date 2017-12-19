@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<link rel="stylesheet" href="../Locales/Function_SEARCH.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="CurrentFormContainer">
+
+    <form action="../Controllers/Function_SEARCH_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
+
+        <div class="AddFormHeader">
+            <h1>Buscar Funcionalidad</h1>
+        </div>
+
+
+        <div class="CurrentForm1">
+            <br>
+            <div class="group">
+                <label for="IdFuncionalidad" class="label">Id Funcionalidad*:</label>
+                <input id="IdFuncionalidad" name="IdFuncionalidad"  type="text" class="input" autofocus placeholder="Id Funcionalidad">
+            </div>
+            <div class="group">
+                <label for="NombreFuncionalidad" class="label">Nombre Funcionalidad*:</label>
+                <input id="NombreFuncionalidad" name="NombreFuncionalidad" type="text" class="input" placeholder="Nombre Funcionalidad">
+            </div>
+            <div class="group">
+                <label for="DescripGrupo" class="label">Descripcion Grupo*:</label>
+                <input id="DescripGrupo" name="DescripGrupo" class="input" placeholder="DescripGrupo">
+            </div>
+            <div class="group">
+                <input id="send" type="submit" class="button" value="Buscar">
+            </div>
+            <div class="group">
+                <a href="../Controllers/Index_Controller.php"><i class="fa fa-undo" id="returnIcon"></i></a>
+            </div>
+        </div>
+
+    </form>
+</div>

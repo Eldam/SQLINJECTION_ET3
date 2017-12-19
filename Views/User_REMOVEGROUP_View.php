@@ -9,9 +9,12 @@
 class User_REMOVEGROUP_View{
 
     var $response;
+    var $login;
 
-    function __construct($response){
+    function __construct($response,$login){
         $this->response = $response;
+        $this->login = $login;
+
         $this->render();
     }
 
@@ -30,10 +33,10 @@ class User_REMOVEGROUP_View{
 
         <div class="DeleteFormContainer">
 
-            <form action="../Controllers/User_REMOVEGROUP_Controller.php?confirm=yes&value=<?php echo $group['IdGrupo'];?>" method="post">
+            <form action="../Controllers/User_REMOVEGROUP_Controller.php?confirm=yes&idGrupo=<?php echo $group['IdGrupo'];?>&login=<?php echo $this->login;?>" method="post">
 
                 <div class="DeleteFormHeader">
-                    <h1>Borrar Grupo</h1>
+                    <h1>Estas seguro que quieres borrar este grupo del usuario: <?php echo $this->login;?>?</h1>
                 </div>
 
                 <div class="DeleteForm1">

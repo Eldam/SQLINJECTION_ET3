@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<link rel="stylesheet" href="../Locales/Function_ADD.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="AddFormContainer">
+
+    <form action="../Controllers/Function_ADD_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
+
+        <div class="AddFormHeader">
+            <h1>Añadir Funcionalidad</h1>
+        </div>
+        <div class="AddForm1">
+            <br>
+            <div class="group">
+                <label for="IdFuncionalidad" class="label">Id Funcionalidad*:</label>
+                <input id="IdFuncionalidad" name="IdFuncionalidad"  type="text" class="input" autofocus placeholder="IdFuncionalidad"
+                       onchange="comprobarAlfabetico(this,25)">
+            </div>
+            <div class="group">
+                <label for="NombreFuncionalidad" class="label">Nombre Funcionalidad*:</label>
+                <input id="NombreFuncionalidad" name="NombreFuncionalidad" type="text" class="input" placeholder="NombreFuncionalidad" required onchange="comprobarVacio(this);comprobarAlfabetico(this,9)">
+            </div>
+            <div class="group">
+                <label for="DescripFuncionalidad" class="label">Descripcion Funcionalidad*:</label>
+                <input id="DescripFuncionalidad" name="DescripFuncionalidad" class="input" required onchange="comprobarVacio(this);comprobarEmail(this,9)">
+            </div>
+
+            <div class="group" id="sendDiv">
+                <button id="send" type="submit" class="fa fa-plus-circle button" value="" title="AÑADIR" onclick="comprobarVacio(this)"></button>
+            </div>
+            <div class="backBttn">
+                <a href="../Controllers/Index_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>
+            </div>
+        </div>
+
+    </form>
+</div>

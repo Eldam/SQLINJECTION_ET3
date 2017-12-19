@@ -6,7 +6,6 @@
  * Time: 4:35 PM
  */
 
-class Group_ASSINGFUNCTION
-{
+class Group_ASSINGACTIONFUNCTION_View{
 
 }

@@ -35,7 +35,7 @@ class Group_SHOWALL_View{
                         <th>Id Grupo</th>
                         <th>Nombre Grupo</th>
                         <th>Descripción Grupo</th>
-                        <th>Gestionar funciones</th>
+                        <th>Asignar funciones</th>
                         <th>Modificar</th>
                         <th>ver</th>
                         <th>borrar</th>
@@ -51,7 +51,7 @@ class Group_SHOWALL_View{
                         echo"<td>".$group['IdGrupo']."</td>".
                             "<td>".$group['NombreGrupo']."</td>".
                             "<td>".$group['DescripGrupo']."</td>".
-                            '<td><a href="../Controllers/Group_SHOWFUNCTIONS_Controller.php?login='.$group["IdGrupo"].'"><i class="fa fa-users" id="modIcon"></i></td></a>'.
+                            '<td><a href="../Controllers/Group_ASSINGACTIONFUNCTION_Controller.php?login='.$group["IdGrupo"].'"><i class="fa fa-users" id="modIcon"></i></td></a>'.
                             '<td><a href="../Controllers/Group_EDIT_Controller.php?value='.$group["IdGrupo"].'"><i class="fa fa-pencil-square-o" id="modIcon"></i></td></a>'.
                             '<td><a href="../Controllers/Group_SHOWCURRENT_Controller.php?value='.$group["IdGrupo"].'"><i class="fa fa-eye" id="seeIcon"></i></td></a>'.
                             '<td><a href="../Controllers/Group_DELETE_Controller.php?value='.$group["IdGrupo"].'"><i class="fa fa-trash" id="delIcon"></i></td></a>'.
@@ -69,7 +69,7 @@ class Group_SHOWALL_View{
 
             <div class="ActionButtons">
                 <!-- <a href="../Controllers/User_SEARCH_Controller.php"><i class="fa fa-search" id="searchIcon"></i></a> -->
-                <a href="../Controllers/Group_ADD_Controller.php"><i class="fa fa-plus-square" id="addIcon" title="Añadir Usuario"></i></a>
+                <a href="../Controllers/Group_ADD_Controller.php"><i class="fa fa-plus-square" id="addIcon" title="Añadir Grupo"></i></a>
                 <a href=' ../Controllers/Index_Controller.php'><i class="fa fa-arrow-circle-left " id="returnIcon" title="Volver"></i></a>
             </div>
 
