@@ -242,9 +242,9 @@ class UserDAO
 
 
         if ((mysqli_num_rows($resultadoUser) == 1) && (mysqli_num_rows($resultadoGrupo) == 1)) {
-            $sql = "DELETE FROM USU_GRUPO where login ='".$this->login()."' AND IdGrupo='".$IdGrupo."';";
+            $sql = "DELETE FROM USU_GRUPO where login ='".$this->login."' AND IdGrupo='".$IdGrupo."';";
             mysqli_query($this->mysqli, $sql);
-            echo $sql;
+
 
 
             return "El usuario ".$this->login." ha sido eliminado de ".$IdGrupo;

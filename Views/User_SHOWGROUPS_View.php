@@ -53,7 +53,7 @@ class User_SHOWGROUPS_View{
                         echo "<td>" . $group['IdGrupo'] . "</td>" .
                             "<td>" . $group['NombreGrupo'] . "</td>" .
                             "<td>" . $group['DescripGrupo'] . "</td>" .
-                            '<td><a href="../Controllers/User_REMOVEGROUP_Controller.php?IdGrupo=' . $group["IdGrupo"] . '"><i class="fa fa-trash" id="delIcon"></i></a></td>' .
+                            '<td><a href="../Controllers/User_REMOVEGROUP_Controller.php?login='.$this->login.'&IdGrupo=' . $group["IdGrupo"] . '"><i class="fa fa-trash" id="delIcon"></i></a></td>' .
                             "</tr>";
 
                     }

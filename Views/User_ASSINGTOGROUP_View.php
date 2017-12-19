@@ -66,7 +66,7 @@ class User_ASSINGTOGROUP_View {
                     <div class="ActionButtons">
                         <button id="send" type="submit" class="fa fa-plus-circle button" title="AÑADIR"></button>
                        <!-- <a href="../Controllers/User_ASSINGTOGROUP_Controller.php?login='<?php $_REQUEST['IdGrupo']?>'"><i class="fa fa-plus-square" id="addIcon" title="Asignar seleccionados"></i></a> -->
-                        <a href=' ../Controllers/User_SHOWGROUPS_Controller.php'><i class="fa fa-arrow-circle-left " id="returnIcon" title="Volver"></i></a>
+                        <a href=' ../Controllers/User_SHOWGROUPS_Controller.php?login=<?php echo $this->login?>'><i class="fa fa-arrow-circle-left " id="returnIcon" title="Volver"></i></a>
                     </div>
                 </form>
             </div>

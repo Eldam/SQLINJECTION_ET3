@@ -70,7 +70,7 @@ else {
             include_once '../Models/User_Model.php';
             $message = "";
             $userDAO = new UserDAO($_REQUEST['login'], "");
-            echo "<br><h1 style='color: red'> " . "" . $_REQUEST['login'] . "beneeeee</h1><br>";
+            //echo "<br><h1 style='color: red'> " . "" . $_REQUEST['login'] . "beneeeee</h1><br>";
             //Se recorre por todos los grupos solicitados
             //asignando al usuario a cada uno de ellos
             //concatenando los mensages de repsuesta para mostrar

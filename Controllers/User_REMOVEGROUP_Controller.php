@@ -46,7 +46,7 @@ else {
             //se elmina la tupla de la BD
             //y se retorna el message de la operacion
             include_once '../Models/User_Model.php';
-            $usuario = new UserDAO($_REQUEST['value'], "");
+            $usuario = new UserDAO($_REQUEST['login'], "");
             $message = $usuario->removeGroup($_REQUEST['IdGrupo']);
             include_once "../Views/MESSAGE_View.php";
             new MESSAGE($message, "../Controllers/User_SHOWGROUPS_Controller.php?login=".$_REQUEST['login']);
