@@ -10,7 +10,7 @@ session_start();
 include_once '../Functions/Authentication.php';
 //si no esta autenticado
 if (!IsAuthenticated()){
-    header('Location: ./index.php');
+    header('Location: ../index.php');
 }
 //esta autenticado
 else {
@@ -42,48 +42,28 @@ else {
                 //Se obtienen todas las acciones de cada funcionalidad
                 $allActionsOfFunction = (new FunctionDAO($function['IdFuncionalidad']))->getAllActions();
 
+                //Se crea un array para almacenar las tuplas completas de acciones de esta funcionalidad
+                $completeArrayOfActions = Array();
+
                 //Se itera a traves de todas las acciones de la funcionalidad
                 while ($actions = mysqli_fetch_array($allActionsOfFunction)) {
-                    //Todo obtener las actions y cargalas en el array asociativo
+                    //Se obienen las aciones completas y se cargan en el array $completeArrayOfActions
+                    $completeAction = (new ActionDAO($actions['IdAccion']))->GET();
+                    $completeArrayOfActions[] = mysqli_fetch_array($completeAction);
                 }
 
-
-
-                $allActionsOfFunction =(new ActionDAO())
-
-                $function[] =
+                //Se añade un nuevo elemento al array que contiene la funcion completa actual
+                //el cual almacena un array con todas las aciones completas de esa funcion
+                $function['actionsArray'] = $completeArrayOfActions;
+                //Se añade el array que contiene la funcion completa con la lista de aciones completas
+                //al array $FunctionsWithActions
+                $FunctionsWithActions[]= $function;
 
             }
 
-
-            //ToDo
-
-            //Se crea un DAO con la PK
-            //y se obtiene la lista de grupos a los que pertenece
-            include_once '../Models/Group_Model.php';
-            $groupDAO = new GroupDAO($_REQUEST['IdGrupo']);
-            $userIdGroups = $groupDAO->GET();
-
-            //echo "<br><h1 style='color: red'> "."".implode($userIdGroups)."</h1><br>";
-
-            //Se crea un DAO con la PK
-            //y se obtiene la lista de todos grupos
-            include_once '../Models/Group_Model.php';
-            $allGroups = (new GroupDAO(""))->SEARCH();
-
-            //Se crea un array vacio
-            $notUserGroups = Array();
-
-            //Se añaden al array $notUserGroups todos los grupos que no posee el usuario
-            while ($group = mysqli_fetch_array($allGroups)) {
-                if (!in_array($group["IdGrupo"], $userIdGroups)) {
-                    $notUserGroups[] = $group;
-                }
-            }
-
-            //se muestra la vista ASSINGTOGROUP con todos los parametros obtenidos
-            include_once '../Views/User_ASSINGTOGROUP_View.php';
-            new User_ASSINGTOGROUP_View($notUserGroups,$_REQUEST['login']);
+            //se muestra la vista ASSINGACTIONFUNCTION con todos los parametros obtenidos
+            include_once '../Views/Group_ASSINGACTIONFUNCTION_View.php';
+            new Group_ASSINGACTIONFUNCTION_View($FunctionsWithActions,$_REQUEST['IdGrupo']);
 
 
 

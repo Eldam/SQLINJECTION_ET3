@@ -5,7 +5,7 @@ session_start();
 include_once '../Functions/Authentication.php';
 //si no esta autenticado
 if (!IsAuthenticated()){
-    header('Location: ./index.php');
+    header('Location: ../index.php');
 }
 //esta autenticado
 else{

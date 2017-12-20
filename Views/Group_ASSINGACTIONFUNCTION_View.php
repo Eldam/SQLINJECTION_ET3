@@ -7,14 +7,13 @@
  */
 
 class Group_ASSINGACTIONFUNCTION_View{
-    var $actions; //guarda todos los elementos de action.
-    var $actionInFunctions;// guarda las acciones que tiene cada funcion.
-    var $functions;// guarda todos los elementos de function.
+    var $FunctionsWithActions; //todas las fuciones con sus respectivas aciones
+    var $IdGrupo;// guarda el id del grupo
 
-    function __construct($actionInFunctions,$actions,$functions){
-        $this->actionInFunctions = $actionInFunctions;
-        $this->actions = $actions;
-        $this->functions = $functions;
+
+    function __construct($FunctionsWithActions,$IdGrupo){
+        $this->FunctionsWithActions = $FunctionsWithActions;
+        $this->IdGrupo = $IdGrupo;
         $this->render();
     }
 
@@ -43,13 +42,14 @@ class Group_ASSINGACTIONFUNCTION_View{
                 <div class="CurrentForm1">
                     <br>
 <?php
-                    $actionInFunctions = mysqli_fetch_array($this->actionInFunctions);
-                    foreach () {
+
+
+                    foreach ($this->FunctionsWithActions as $FunctionWithActions) {
 
                         echo '<div class="group" >';
-                        echo '<label for="'.$this->functions.'" class="label" >'.$this->functions.'</label>';
-                        foreach(){
-                            echo '<input id="'.$this->functions.'" name= "'.$this->functions.'" type="text" class="input" value= "'.$this->actions.'" >';
+                        echo '<label for="'.$FunctionWithActions['NombreFuncionalidad'].'" class="label" >'.$FunctionWithActions['DescripFuncionalidad'].'</label>';
+                        foreach($FunctionWithActions['actionsArray'] as $action){
+                            echo '<input id="'.$action['NombreAccion'].'" name= "'.$action['NombreAccion'].'" type="text" class="input" value= "'.$action['NombreAccion'].'" >';
                         }
                         echo '</div>';
 
