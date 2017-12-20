@@ -73,8 +73,8 @@ else {
 
         }else{
 
-            //Se comprueba si se ha solicitado la asignacion de algun grupo
-            if(isset($_REQUEST["arrayGroup"])) {
+            //Se comprueba si se ha solicitado la asignacion de algun privilegio
+            if(isset($_REQUEST["actionsArray"])) {
                 //en caso afirmativo
                 //se asigna el usuario a los grupos solicitados
                 //Se crea un DAO con la PK

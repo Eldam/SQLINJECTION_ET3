@@ -326,6 +326,9 @@ INSERT INTO `USU_GRUPO`(`login`, `IdGrupo`) VALUES ("alumno","ALUMNS");
 INSERT INTO `FUNCIONALIDAD`(`IdFuncionalidad`, `NombreFuncionalidad`, `DescripFuncionalidad`) VALUES ("USERS","GESTIONAR USUARIOS","Permite admisistrar a los difentes usuarios del sistema");
 INSERT INTO `FUNCIONALIDAD`(`IdFuncionalidad`, `NombreFuncionalidad`, `DescripFuncionalidad`) VALUES ("GROUPS","GESTIONAR GRUPOS","Permite admisistrar a los difentes grupos de usuarios del sistema");
 INSERT INTO `FUNCIONALIDAD`(`IdFuncionalidad`, `NombreFuncionalidad`, `DescripFuncionalidad`) VALUES ("PERMIS","GESTIONAR PERMISOS","Permite admisistrar a los difentes permisos del sistema");
+INSERT INTO `FUNCIONALIDAD`(`IdFuncionalidad`, `NombreFuncionalidad`, `DescripFuncionalidad`) VALUES ("WORK","GESTIONAR TRABAJOS","Permite admisistrar a los difentes trabajo existentes en el sistema");
+INSERT INTO `FUNCIONALIDAD`(`IdFuncionalidad`, `NombreFuncionalidad`, `DescripFuncionalidad`) VALUES ("SCORE","GESTIONAR NOTAS","Permite admisistrar a las notas");
+
 
 
 #Insert ACCION
@@ -355,6 +358,21 @@ INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("GROUPS","SEARC
 
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("PERMIS","ACESS");
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("PERMIS","SEARCH");
+
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("WORK","ADD");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("WORK","ACESS");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("WORK","EDIT");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("WORK","DELETE");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("WORK","SEARCH");
+
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("SCORE","ADD");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("SCORE","ACESS");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("SCORE","EDIT");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("SCORE","DELETE");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("SCORE","SEARCH");
+
+
+
 
 #Insert PERMISO
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","USERS","ADD");

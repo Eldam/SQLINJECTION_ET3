@@ -45,15 +45,25 @@ class Group_ASSINGACTIONFUNCTION_View{
                     <br>
 <?php
 
+                    include_once "../Functions/Permisions.php";
 
                     foreach ($this->FunctionsWithActions as $FunctionWithActions) {
 
                         echo '<div class="group" >';
                         //echo '<label for="'.$FunctionWithActions['NombreFuncionalidad'].'" class="label" >'.$FunctionWithActions['DescripFuncionalidad'].'</label>';
+
+
                         echo "<h3>".$FunctionWithActions['NombreFuncionalidad'] ."       [" . $FunctionWithActions['DescripFuncionalidad']."]</h3>";
                         foreach($FunctionWithActions['actionsArray'] as $action){
 
-                            echo '<label><input type="checkbox" id="??" value="??">'.$action['NombreAccion'].' '.$action['DescripAccion'].'</label><br>';
+                            echo '<label><input type="checkbox" name="arrayFunciones['.$FunctionWithActions['IdFuncionalidad'].']" value="'.$action['IdAccion'].'" ';
+                            if(groupHasPermisionsTo($this->grupo['IdGrupo'],$FunctionWithActions['IdFuncionalidad'],$action['IdAccion'])){
+                                echo "checked";
+                            }
+                            echo '>'.$action['NombreAccion'].' '.$action['DescripAccion'].'</label><br>';
+
+
+
                             //echo '<input id="'.$action['NombreAccion'].'" name= "'.$action['NombreAccion'].'" type="text" class="input" value= "'.$action['NombreAccion'].'" readonly>';
 
                         }
@@ -66,7 +76,7 @@ class Group_ASSINGACTIONFUNCTION_View{
                         <input id="send" type="submit" class="button" value="ASIGNAR" onclick="comprobarVacio(this)">
                     </div>
                     <div class="backBttn">
-                        <a href="../Controllers/User_SHOWALL_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>
+                        <a href="../Controllers/Group_SHOWALL_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>
                     </div>
                 </div>
             </form>

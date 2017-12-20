@@ -25,4 +25,26 @@ function hasPermisionsTo(string $IdFuncionalidad,string $IdAccion): bool {
     return false;
 
 } //end of function hasPermisionsTo()
+
+
+
+
+//Fucion hasPermisionsTo comprueba que el grupo indicado
+//posse permisos para la accion en fucionalidad solicitada
+//retorna true en caso correcto
+//de lo contrario false
+function groupHasPermisionsTo(string $IdGrupo,string $IdFuncionalidad,string $IdAccion): bool {
+
+    include_once "../Models/Group_Model.php";
+        //Retornara true en el caso de que posea los permisos
+        if((new GroupDAO($IdGrupo))->hasPermisionsOnTheAction($IdFuncionalidad,$IdAccion)){
+            return true;
+        }else{
+            return false;
+        }
+
+
+} //end of function hasPermisionsTo()
+
+
 ?>
