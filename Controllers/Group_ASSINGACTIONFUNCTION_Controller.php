@@ -61,9 +61,13 @@ else {
 
             }
 
+            //Se obtiene toda la informacion del grupo
+            include_once '../Models/Group_Model.php';
+            $grupo = mysqli_fetch_array((new GroupDAO($_REQUEST['IdGrupo']))->GET());
+
             //se muestra la vista ASSINGACTIONFUNCTION con todos los parametros obtenidos
             include_once '../Views/Group_ASSINGACTIONFUNCTION_View.php';
-            new Group_ASSINGACTIONFUNCTION_View($FunctionsWithActions,$_REQUEST['IdGrupo']);
+            new Group_ASSINGACTIONFUNCTION_View($FunctionsWithActions,$grupo);
 
 
 

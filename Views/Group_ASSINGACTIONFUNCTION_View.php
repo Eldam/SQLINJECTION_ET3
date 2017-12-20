@@ -8,12 +8,12 @@
 
 class Group_ASSINGACTIONFUNCTION_View{
     var $FunctionsWithActions; //todas las fuciones con sus respectivas aciones
-    var $IdGrupo;// guarda el id del grupo
+    var $grupo;// guarda el toda la informacion del grupo
 
 
-    function __construct($FunctionsWithActions,$IdGrupo){
+    function __construct($FunctionsWithActions,$grupo){
         $this->FunctionsWithActions = $FunctionsWithActions;
-        $this->IdGrupo = $IdGrupo;
+        $this->grupo = $grupo;
         $this->render();
     }
 
@@ -23,10 +23,10 @@ class Group_ASSINGACTIONFUNCTION_View{
         /*include './Strings_SPANISH.php';*/
         include '../Locales/Header.html';
         include '../Locales/LateralBar.php';
-
+        //<meta charset="utf-8">
         ?>
 
-        <meta charset="utf-8">
+
         <link rel="stylesheet" href="../Locales/Group_ASSINGACTIONFUNCTION.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -36,10 +36,12 @@ class Group_ASSINGACTIONFUNCTION_View{
             <form action="../Controllers/Group_ASSINGACTIONFUNCTION_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
 
                 <div class="CurrentHeader">
-                    <h1>Asignar funciones</h1>
+                    <h1>Permisos para <?php echo $this->grupo['NombreGrupo']?></h1>
+
                 </div>
 
                 <div class="CurrentForm1">
+                    <br>
                     <br>
 <?php
 
@@ -47,10 +49,15 @@ class Group_ASSINGACTIONFUNCTION_View{
                     foreach ($this->FunctionsWithActions as $FunctionWithActions) {
 
                         echo '<div class="group" >';
-                        echo '<label for="'.$FunctionWithActions['NombreFuncionalidad'].'" class="label" >'.$FunctionWithActions['DescripFuncionalidad'].'</label>';
+                        //echo '<label for="'.$FunctionWithActions['NombreFuncionalidad'].'" class="label" >'.$FunctionWithActions['DescripFuncionalidad'].'</label>';
+                        echo "<h3>".$FunctionWithActions['NombreFuncionalidad'] ."       [" . $FunctionWithActions['DescripFuncionalidad']."]</h3>";
                         foreach($FunctionWithActions['actionsArray'] as $action){
-                            echo '<input id="'.$action['NombreAccion'].'" name= "'.$action['NombreAccion'].'" type="text" class="input" value= "'.$action['NombreAccion'].'" >';
+
+                            echo '<label><input type="checkbox" id="??" value="??">'.$action['NombreAccion'].' '.$action['DescripAccion'].'</label><br>';
+                            //echo '<input id="'.$action['NombreAccion'].'" name= "'.$action['NombreAccion'].'" type="text" class="input" value= "'.$action['NombreAccion'].'" readonly>';
+
                         }
+                        echo "<br>";
                         echo '</div>';
 
                     }

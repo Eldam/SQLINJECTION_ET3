@@ -15,6 +15,7 @@ function ConnectDB()
 		return false;
 	}
 	else{
+        $mysqli->set_charset("utf8");
 		return $mysqli;
 	}
 }
