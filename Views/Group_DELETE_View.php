@@ -29,7 +29,7 @@ class Group_DELETE_View{
 
         <div class="DeleteFormContainer">
 
-            <form action="../Controllers/Group_DELETE_Controller.php?confirm=yes&value=<?php echo $group['login'];?>" onsubmit="comprobarFormsVacios(this)" method="post">
+            <form action="../Controllers/Group_DELETE_Controller.php?confirm=yes&value=<?php echo $group['IdGrupo'];?>" onsubmit="comprobarFormsVacios(this)" method="post">
 
                 <div class="DeleteFormHeader">
                     <h1>Borrar Grupo</h1>

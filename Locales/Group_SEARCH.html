@@ -3,16 +3,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-<div class="CurrentFormContainer">
+<div class="SearchFormContainer">
 
-    <form action="../Controllers/Group_SEARCH_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
+    <form action="../Controllers/Group_SEARCH_Controller.php" method="post">
 
-        <div class="AddFormHeader">
+        <div class="SearchFormHeader">
             <h1>Buscar Grupo</h1>
         </div>
 
 
-        <div class="CurrentForm1">
+        <div class="SearchForm1">
             <br>
             <div class="group">
                 <label for="IdGrupo" class="label">Id Grupo*:</label>
@@ -30,7 +30,7 @@
                 <input id="send" type="submit" class="button" value="Buscar">
             </div>
             <div class="group">
-                <a href="../Controllers/Index_Controller.php"><i class="fa fa-undo" id="returnIcon"></i></a>
+                <a href="../Controllers/Index_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>
             </div>
         </div>
 

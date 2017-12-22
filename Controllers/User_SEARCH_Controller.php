@@ -45,11 +45,10 @@ else {
 
             //Se crea un DAO y le pasan todos los paramertos
             //y se muestra la vista ShowAll con todos los parametros obtenidos
+            include_once '../Models/User_Model.php';
             $usuario = new UserDAO($login, $password);
             $usuario->setData($DNI, $Nombre, $Apellidos, $Telefono, $Correo, $Direccion);
-            include_once '../Models/User_Model.php';
-            $userDAO = new UserDAO("", "");
-            $resultado = $userDAO->SEARCH();
+            $resultado = $usuario->SEARCH();
 
             include_once '../Views/User_SHOWALL_View.php';
             new User_SHOWALL_View($resultado);

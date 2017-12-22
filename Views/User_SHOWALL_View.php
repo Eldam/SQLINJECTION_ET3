@@ -12,12 +12,13 @@ class User_SHOWALL_View {
 
         /*include './Strings_SPANISH.php';*/
         include '../Locales/Header.html';
+        include '../Locales/LateralBar.php';
 ?>
         <link rel="stylesheet" href="../Locales/User_SHOWALL.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <?php
-        echo '<h1 style="color: white;padding-left: 100px ">Se han encontrado '.mysqli_num_rows($this->response).' Usuario(s).</h1>';
+        echo '<h1 style="color: white;padding-left: 100px ">Se han encontrado '.'<span style="color: red;">'. mysqli_num_rows($this->response).' </span> Usuario(s).</h1>';
         ?>
 
 

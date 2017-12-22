@@ -36,7 +36,7 @@ class Group_EDIT_View
                     <br>
                     <div class="group">
                         <label for="IdGrupo" class="label">Id Grupo*:</label>
-                        <input id="IdGrupo" name="IdGrupo"  type="text" class="input" value="<?php echo $group['login'];?>" readonly>
+                        <input id="IdGrupo" name="IdGrupo"  type="text" class="input" value="<?php echo $group['IdGrupo'];?>" readonly>
                     </div>
                     <div class="group">
                         <label for="NombreGrupo" class="label">Nombre Grupo*:</label>
@@ -44,14 +44,14 @@ class Group_EDIT_View
                     </div>
                     <div class="group">
                         <label for="DescripGrupo" class="label">Descripcion Grupo*:</label>
-                        <input id="DescripGrupo" name="DescripGrupo" type="text" class="input" value="<?php echo $group['DescripGrupo'];?>" onclick="comprobarVacio(this)">
+                        <textarea id="DescripGrupo" name="DescripGrupo" type="text" class="input" onclick="comprobarVacio(this)"><?php echo $group['DescripGrupo'];?></textarea>
                     </div>
 
                     <div class="group">
                         <input id="send" type="submit" class="button" value="Editar" onclick="comprobarVacio(this)">
                     </div>
                     <div class="backBttn">
-                        <a href="../Controllers/User_SHOWALL_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>
+                        <a href="../Controllers/Group_SHOWALL_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>
                     </div>
 
 

@@ -5,7 +5,7 @@
 
 <div class="AddFormContainer">
 
-    <form action="../Controllers/Group_ADD_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
+    <form action="../Controllers/Group_ADD_Controller.php" onsubmit="comprobarFormVaciosWithoutButton(this)" method="post">
 
         <div class="AddFormHeader">
             <h1>Añadir Grupo</h1>
@@ -14,20 +14,20 @@
             <br>
             <div class="group">
                 <label for="IdGrupo" class="label">IdGrupo*:</label>
-                <input id="IdGrupo" name="IdGrupo"  type="text" class="input" autofocus placeholder="IdGrupo"
-                       onchange="comprobarAlfabetico(this,25)">
+                <input id="IdGrupo" name="IdGrupo"  type="text" class="input" maxlength="6" autofocus placeholder="IdGrupo"
+                       onchange="comprobarAlfabetico(this,6)">
             </div>
             <div class="group">
-                <label for="DNI" class="label">DNI*:</label>
-                <input id="DNI" name="DNI" type="text" class="input" placeholder="87654321X" required onchange="comprobarVacio(this);comprobarAlfabetico(this,9)">
+                <label for="NombreGrupo" class="label">Nombre Grupo*:</label>
+                <input id="NombreGrupo" name="NombreGrupo" type="text" class="input" maxlength="60" placeholder="Nombre grupo" required onchange="comprobarVacio(this);comprobarAlfabetico(this,60)">
             </div>
             <div class="group">
-                <label for="Correo" class="label">Email*:</label>
-                <input id="Correo" name="Correo" class="input" required onchange="comprobarVacio(this);comprobarEmail(this,9)">
+                <label for="DescripGrupo" class="label">Descripcion Grupo*:</label>
+                <textarea id="DescripGrupo" name="DescripGrupo" class="input" placeholder="Describe el grupo" maxlength="100" required onchange="comprobarVacio(this);comprobarAlfabetico(this,100)"></textarea>
             </div>
 
             <div class="group" id="sendDiv">
-                <button id="send" type="submit" class="fa fa-plus-circle button" value="" title="AÑADIR" onclick="comprobarVacio(this)"></button>
+                <button id="send" type="submit" class="fa fa-plus-circle button" value="" title="AÑADIR"></button>
             </div>
             <div class="backBttn">
                 <a href="../Controllers/Index_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>

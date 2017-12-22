@@ -1,3 +1,26 @@
+@media (max-height: 600px) {
+	.footer-distributed{
+		height: 70px;
+	}
+	#string {
+		display: none;
+	}
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+		display: none;
+	}
+
+
+}
 .footer-distributed{
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -5,12 +28,11 @@
 	width: 100%;
 	max-height: 200px;
 	text-align: left;
-	font: bold 16px sans-serif;
+	font: bold 12px sans-serif;
 	position: fixed;
 	bottom: 0px;
 	padding: 5px 50px;
 	margin-top: 80px;
-	overflow: auto;
 }
 
 .footer-distributed .footer-left,
@@ -30,8 +52,9 @@
 
 .footer-distributed h3{
 	color:  #D3A953;
-	font: normal 36px 'Cookie', cursive;
+	font: normal 24px 'Cookie', cursive;
 	margin: 0;
+	padding-bottom: -20px;
 }
 
 .footer-distributed h3 span{
@@ -55,7 +78,7 @@
 
 .footer-distributed .footer-company-name{
 	color:  #8f9296;
-	font-size: 14px;
+	font-size: 10px;
 	font-weight: normal;
 	margin: 0;
 }
@@ -75,12 +98,12 @@
 	border-radius: 50%;
 	text-align: center;
 	line-height: 42px;
-	margin: 10px 15px;
+	margin: 2px 15px;
 	vertical-align: middle;
 }
 
 .footer-distributed .footer-center i.fa-envelope{
-	font-size: 17px;
+	font-size: 14px;
 	line-height: 38px;
 }
 
@@ -94,7 +117,7 @@
 .footer-distributed .footer-center p span{
 	display:block;
 	font-weight: normal;
-	font-size:14px;
+	font-size:12px;
 	line-height:2;
 }
 
@@ -156,7 +179,7 @@
 
 /* If you don't want the footer to be responsive, remove these media queries */
 
-@media (max-width: 880px) {
+@media (max-width: 600px) {
 
 	.footer-distributed{
 		font: bold 14px sans-serif;

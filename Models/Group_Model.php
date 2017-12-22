@@ -106,7 +106,7 @@ class GroupDAO
                 "',DescripGrupo = '" . $this->DescripGrupo .
                 "' WHERE IdGrupo = '" . $this->IdGrupo . "'";
             mysqli_query($this->mysqli, $sql);
-            return "El usuario ha sido Actualizado";
+            return "El Grupo ha sido Actualizado";
 
         } else {
 

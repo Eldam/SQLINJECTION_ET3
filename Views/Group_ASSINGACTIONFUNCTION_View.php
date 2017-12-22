@@ -36,7 +36,7 @@ class Group_ASSINGACTIONFUNCTION_View{
             <form action="../Controllers/Group_ASSINGACTIONFUNCTION_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
 
                 <div class="CurrentHeader">
-                    <h1>Permisos para <?php echo $this->grupo['NombreGrupo']?></h1>
+                    <h2>Permisos para <?php echo $this->grupo['NombreGrupo']?></h2>
 
                 </div>
 
@@ -53,14 +53,14 @@ class Group_ASSINGACTIONFUNCTION_View{
                         //echo '<label for="'.$FunctionWithActions['NombreFuncionalidad'].'" class="label" >'.$FunctionWithActions['DescripFuncionalidad'].'</label>';
 
 
-                        echo "<h3>".$FunctionWithActions['NombreFuncionalidad'] ."       [" . $FunctionWithActions['DescripFuncionalidad']."]</h3>";
+                        echo "<h3>".$FunctionWithActions['NombreFuncionalidad'] ."<span class='descrip'> <t>[" . $FunctionWithActions['DescripFuncionalidad']."]</span></h3>";
                         foreach($FunctionWithActions['actionsArray'] as $action){
 
                             echo '<label><input type="checkbox" name="arrayFunciones['.$FunctionWithActions['IdFuncionalidad'].']" value="'.$action['IdAccion'].'" ';
                             if(groupHasPermisionsTo($this->grupo['IdGrupo'],$FunctionWithActions['IdFuncionalidad'],$action['IdAccion'])){
                                 echo "checked";
                             }
-                            echo '>'.$action['NombreAccion'].' '.$action['DescripAccion'].'</label><br>';
+                            echo '>'.$action['NombreAccion'].' <span>('.$action['DescripAccion'].')</span></label><br>';
 
 
 
@@ -82,7 +82,7 @@ class Group_ASSINGACTIONFUNCTION_View{
             </form>
         </div>
 
-
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
         <?php
         include '../Locales/Footer.html';

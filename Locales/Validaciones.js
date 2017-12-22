@@ -27,6 +27,18 @@
 	}
 
 
+	//comprueba que los campos de los formularios esten cubiertos
+	function comprobarFormVaciosWithoutButton(form){
+		var i;//iterador
+		for (i = 0; i < form.length -1; i++) {//itera por todos los campos del form
+			//llama a comprobar vacio para ver si tiene datos.
+			if(!comprobarVacio(form[i])){
+				return false;
+			}
+		}
+		return true;
+	}
+
 
 
 	function comprobarTexto(campo,size) {

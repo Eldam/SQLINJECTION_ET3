@@ -2,6 +2,7 @@ body{
     margin: 0;
     background-color: #e0e0e0;
     background-image: url("../Locales/wallpaper.jpg");
+    z-index: 2;
 
 }
 
@@ -13,4 +14,14 @@ body{
 
 .errorMessage{
     color: red;
+}
+
+@media (max-height: 600px) {
+    .lateralBar{
+        position: absolute;
+    }
+    .IndexContainer{
+        padding-left: 50px;
+    }
+
 }
