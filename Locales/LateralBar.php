@@ -116,24 +116,6 @@
 
 
 
-                <?php if(hasPermisionsTo("PERMIS","ACESS")){?>
-
-                    <li class="line2">
-                        <a href="../Controllers/Permission_SHOWALL_Controller.php"><i class="fa fa-globe"></i>Show all permissions</a>
-                    </li>
-
-                <?php } ?>
-
-                <?php if(hasPermisionsTo("PERMIS","SEARCH")){?>
-
-                    <li class="line2">
-                        <a href="../Controllers/Permission_SEARCH_Controller.php"><i class="fa fa-search"></i>Search permission</a>
-                    </li>
-
-                <?php } ?>
-
-                <!------------------------------------------------------------------------------------------------------------------------>
-
 
 
 

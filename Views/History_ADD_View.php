@@ -26,7 +26,7 @@ class History_ADD_View
 
         <div class="AddFormContainer">
 
-            <form action="../Controllers/History_ADD_Controller.php?idTrabajo=<?php echo $this->idTrabajo ?>" onsubmit="comprobarFormsVacios(this)" method="post">
+            <form action="../Controllers/Work_ASSINGHISTORY_Controller.php?IdTrabajo=<?php echo $this->idTrabajo ?>" onsubmit="comprobarFormVaciosWithoutButton(this)" method="post">
 
                 <div class="AddFormHeader">
                     <h1>A�adir Historia</h1>
@@ -35,12 +35,12 @@ class History_ADD_View
                     <br>
 
                     <div class="group">
-                        <label for="NombreFuncionalidad" class="label">Nombre Funcionalidad*:</label>
-                        <textarea id="NombreFuncionalidad" name="NombreFuncionalidad" maxlength="300" rows="4" cols="100" class="input" placeholder="NombreFuncionalidad" required onchange="comprobarVacio(this);comprobarAlfabetico(this,300)"></textarea>
+                        <label for="NombreFuncionalidad" class="label">Texto Historia*:</label>
+                        <textarea id="NombreFuncionalidad" name="TextoHistoria" maxlength="300" rows="4" cols="100" class="input" placeholder="NombreFuncionalidad" required onchange="comprobarVacio(this);comprobarAlfabetico(this,300)"></textarea>
                     </div>
 
                     <div class="group" id="sendDiv">
-                        <button id="send" type="submit" class="fa fa-plus-circle button" value="" title="A�ADIR" onclick="comprobarVacio(this)"></button>
+                        <button id="send" type="submit" class="fa fa-plus-circle button" value="" title="A�ADIR" ></button>
                     </div>
                     <div class="backBttn">
                         <a href="../Controllers/Index_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>

@@ -158,8 +158,26 @@ class WorkDAO
 
 
 
+    //funcion getHistories: retorna un array de todos los historias asignados a un trabajo
+    function getHistories() {
+        $sql = "select * FROM HISTORIA where IdTrabajo = '".$this->IdTrabajo."'";
+        $resultado = mysqli_query($this->mysqli,$sql);
 
 
+
+        return $resultado;
+    }
+
+
+
+    //funcion countHistories: el numero de historiaas existentes
+    function countHistories() {
+        $sql = "SELECT * FROM HISTORIA where IdTrabajo = '".$this->IdTrabajo."'";
+        $resultado = mysqli_query($this->mysqli,$sql);
+
+
+        return $resultado->num_rows;
+    }
 
 
 

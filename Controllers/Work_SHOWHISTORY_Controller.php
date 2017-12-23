@@ -26,29 +26,20 @@ else {
         new MESSAGE("No posee permisos para la accion solicitada", '../index.php');
     } else {
 
-        $IdTrabajo =$_REQUEST['IdTrabajo'];
+        $IdTrabajo =$_REQUEST['value'];
         //Se crea un DAO con la PK
         //y se obtiene la lista de grupos a los que pertenece
         include_once '../Models/Work_Model.php';
         $workDAO = new WorkDAO($IdTrabajo);
         $IDHistorias = $workDAO->getHistories();
 
-        //Se crea un array para almacenar la informacion completa de
-        // todos los grupos a los que pertence el usuario
-        $completeHistories = Array();
 
-        include_once '../Models/History_Model.php';
-        //Se itera a traves del array de IDgrupos y se carga en el complete grups
-        //la informacion completa de cada grupo
-        foreach($IDHistorias as $group){
-            $completeHistories[] = (new HistoryDAO($group))->GET();
-        }
 
 
 
         //se muestra la vista ShowGrups con todos los parametros obtenidos
-        include_once '../Views/Work_SHOWGROUPS_View.php';
-        new Work_SHOWGROUPS_View($completeHistories,$IdTrabajo);
+        include_once '../Views/Work_SHOWHISTORY_View.php';
+        new Work_SHOWHISTORY_View($IDHistorias,$IdTrabajo);
 
     }
 

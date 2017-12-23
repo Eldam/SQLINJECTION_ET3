@@ -13,8 +13,16 @@
   		else{
   			return true;
   		}
-  	} 
-  	//comprueba que los campos de los formularios esten cubiertos
+  	}
+
+
+
+
+
+
+
+
+//comprueba que los campos de los formularios esten cubiertos
   	function comprobarFormsVacios(form){
 	    var i;//iterador
 	    for (i = 0; i < form.length; i++) {//itera por todos los campos del form

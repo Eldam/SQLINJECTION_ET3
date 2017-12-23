@@ -45,8 +45,8 @@ class Work_SHOWHISTORY_View
                     <?php
 
 
-                    foreach($this->response as $histories) {
-                        $history = mysqli_fetch_array($histories);
+
+                        while($history = mysqli_fetch_array($this->response)){
 
 
                         echo "<tr>";
@@ -63,7 +63,7 @@ class Work_SHOWHISTORY_View
 
             <div class="ActionButtons">
                 <!-- <a href="../Controllers/User_SEARCH_Controller.php"><i class="fa fa-search" id="searchIcon"></i></a> -->
-                <a href="../Controllers/Work_ASSINGHISTORY_Controller.php?getGroups=true&login=<?php echo $this->IdTrabajo ?>"><i class="fa fa-plus-square" id="addIcon" title="Asignar grupo"></i></a>
+                <a href="../Controllers/Work_ASSINGHISTORY_Controller.php?value=<?php echo $this->IdTrabajo ?>"><i class="fa fa-plus-square" id="addIcon" title="Asignar grupo"></i></a>
                 <a href=' ../Controllers/Work_SHOWALL_Controller.php'><i class="fa fa-arrow-circle-left " id="returnIcon" title="Volver"></i></a>
             </div>
 
