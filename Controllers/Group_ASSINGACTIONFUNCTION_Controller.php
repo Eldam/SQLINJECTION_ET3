@@ -26,6 +26,7 @@ else {
 
         //Si la variable getAll esta asignada
         //se obtiene todos las acciones que esisten para cada grupo
+        //y se muestra la vista Group_ASSINGACTIONFUNCTION_View
 
         if(isset($_REQUEST["getAll"])) {
 
@@ -71,29 +72,30 @@ else {
 
 
 
+
+
+
+
         }else{
 
             //Se comprueba si se ha solicitado la asignacion de algun privilegio
             if(isset($_REQUEST["actionsArray"])) {
                 //en caso afirmativo
-                //se asigna el usuario a los grupos solicitados
+                //obtienen todos los privilegios solicitados
                 //Se crea un DAO con la PK
-                include_once '../Models/User_Model.php';
-                $message = "";
-                $userDAO = new UserDAO($_REQUEST['login'], "");
-                //echo "<br><h1 style='color: red'> " . "" . $_REQUEST['login'] . "beneeeee</h1><br>";
-                //Se recorre por todos los grupos solicitados
-                //asignando al usuario a cada uno de ellos
-                //concatenando los mensages de repsuesta para mostrar
-                foreach ($_REQUEST['arrayGroup'] as $group) {
-
-                    $message = $message . "<br>" . ($userDAO->assingGroup($group));
-
-                }
+                include_once '../Models/Group_Model.php';
+                $userDAO = new GroupDAO($_REQUEST['IdGrupo']);
+                $message =$userDAO->setPermisions($_REQUEST['actionsArray']);
 
 
                 include_once "../Views/MESSAGE_View.php";
-                new MESSAGE($message, "../Controllers/User_SHOWGROUPS_Controller.php?login=" . $_REQUEST['login']);
+                new MESSAGE($message,"../Controllers/Group_SHOWALL_Controller.php");
+
+
+
+
+
+
 
 
             }else{
@@ -102,7 +104,7 @@ else {
                 //se muestra mensage de aleta
 
                 include_once "../Views/MESSAGE_View.php";
-                new MESSAGE("No se ha selecionado ningun grupo", "../Controllers/User_ASSINGTOGROUP_Controller.php?getGroups=true&login=" . $_REQUEST['login']);
+                new MESSAGE("No se ha selecionado ningun privilegio","../Controllers/Group_SHOWALL_Controller.php");
 
             }
 

@@ -33,7 +33,7 @@ class Group_ASSINGACTIONFUNCTION_View{
 
         <div class="CurrentFormContainer">
 
-            <form action="../Controllers/Group_ASSINGACTIONFUNCTION_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
+            <form action="../Controllers/Group_ASSINGACTIONFUNCTION_Controller.php?IdGrupo=<?php echo $this->grupo['IdGrupo']?>" onsubmit="comprobarFormsVacios(this)" method="post">
 
                 <div class="CurrentHeader">
                     <h2>Permisos para <?php echo $this->grupo['NombreGrupo']?></h2>

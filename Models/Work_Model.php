@@ -114,12 +114,14 @@ class WorkDAO
 
         if (mysqli_num_rows($resultado) == 1) {
             $sql = "UPDATE TRABAJO SET 
-            		NombreGrupo = '" . $this->NombreTrabajo .
-                "',FechaIniTrabajo = '" . $this->FechaIniTrabajo .
-                "',FechaFinTrabajo = '" . $this->FechaFinTrabajo .
-                "',PorcentajeNota = '" . $this->PorcentajeNota .
+            		NombreTrabajo = '" . $this->NombreTrabajo .
+                "', FechaIniTrabajo = '" . $this->FechaIniTrabajo .
+                "', FechaFinTrabajo = '" . $this->FechaFinTrabajo .
+                "', PorcentajeNota = '" . $this->PorcentajeNota .
                 "' WHERE IdTrabajo = '" . $this->IdTrabajo . "'";
+
             mysqli_query($this->mysqli, $sql);
+
             return "El Trabajo ha sido Actualizado";
 
         } else {
