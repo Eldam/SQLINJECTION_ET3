@@ -155,22 +155,24 @@ class GroupDAO
         $message = "";
         try {
 
-            $this->mysqli->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            //$this->mysqli->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $this->mysqli->beginTransaction();
-            $this->mysqli->exec("DELETE FROM PERMISO WHERE IdGrupo='".$this->IdGrupo."';");
+            mysqli_begin_transaction($this->mysqli);
 
-            foreach ($permisions as $IdFuncionalidad => $IdAccion) {
-                $this->mysqli->exec("insert into PERMISO (IdGrupo, IdFuncionalidad, IdAccion) 
-                values (".$this->IdGrupo.", ".$IdFuncionalidad.", ".$IdAccion.")");
+            mysqli_query($this->mysqli,"DELETE FROM PERMISO WHERE IdGrupo='".$this->IdGrupo."';");
+
+            foreach ($permisions as $functionAndAction) {
+                $split=explode(".",$functionAndAction,2);
+                mysqli_query($this->mysqli,"insert into PERMISO (IdGrupo, IdFuncionalidad, IdAccion) 
+                values ('".$this->IdGrupo."', '".$split[0]."', '".$split[1]."')");
             }
 
-            $this->mysqli->commit();
+            mysqli_commit($this->mysqli);
 
             $message="Permsos actualidados con exito";
 
         } catch (Exception $e) {
-            $this->mysqli->rollBack();
+            mysqli_rollback($this->mysqli);
             $message= "Error en la actualizacion de permsios : ". $e->getMessage();
         }
 

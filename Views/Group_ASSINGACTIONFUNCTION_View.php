@@ -56,7 +56,7 @@ class Group_ASSINGACTIONFUNCTION_View{
                         echo "<h3>".$FunctionWithActions['NombreFuncionalidad'] ."<span class='descrip'> <t>[" . $FunctionWithActions['DescripFuncionalidad']."]</span></h3>";
                         foreach($FunctionWithActions['actionsArray'] as $action){
 
-                            echo '<label><input type="checkbox" name="arrayFunciones['.$FunctionWithActions['IdFuncionalidad'].']" value="'.$action['IdAccion'].'" ';
+                            echo '<label><input type="checkbox" name="arrayFunciones[]" value="'.$FunctionWithActions['IdFuncionalidad'].".".$action['IdAccion'].'" ';
                             if(groupHasPermisionsTo($this->grupo['IdGrupo'],$FunctionWithActions['IdFuncionalidad'],$action['IdAccion'])){
                                 echo "checked";
                             }

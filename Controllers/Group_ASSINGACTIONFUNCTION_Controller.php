@@ -79,13 +79,18 @@ else {
         }else{
 
             //Se comprueba si se ha solicitado la asignacion de algun privilegio
-            if(isset($_REQUEST["actionsArray"])) {
+            if(!isset($_REQUEST["arrayFunciones"])) {
+                //en el caso de que se haya solocitado un grupo sin privilegios
+                //se crea un array vacio de privilegios para que se eliminen todos los
+                //privilegios existentes en ese grupo y no se asigne niguno
+                $_REQUEST["arrayFunciones"]= Array();
+            }
                 //en caso afirmativo
                 //obtienen todos los privilegios solicitados
                 //Se crea un DAO con la PK
                 include_once '../Models/Group_Model.php';
                 $userDAO = new GroupDAO($_REQUEST['IdGrupo']);
-                $message =$userDAO->setPermisions($_REQUEST['actionsArray']);
+                $message =$userDAO->setPermisions($_REQUEST['arrayFunciones']);
 
 
                 include_once "../Views/MESSAGE_View.php";
@@ -93,20 +98,6 @@ else {
 
 
 
-
-
-
-
-
-            }else{
-
-                //En el caso de que no se halla solicitado ningun grupo
-                //se muestra mensage de aleta
-
-                include_once "../Views/MESSAGE_View.php";
-                new MESSAGE("No se ha selecionado ningun privilegio","../Controllers/Group_SHOWALL_Controller.php");
-
-            }
 
 
 
