@@ -47,7 +47,7 @@ class Work_EDIT_view
                     </div>
                     <div class="group">
                         <label for="PorcentajeNota" class="label">Porcentaje Nota*:</label>
-                        <input id="PorcentajeNota" name="PorcentajeNota" type="text" class="input" value="<?php echo $work['PorcentajeNota'];?>" onclick="comprobarReal(this,0,10)">
+                        <input id="PorcentajeNota" name="PorcentajeNota" type="text" class="input" value="<?php echo $work['PorcentajeNota'];?>" onchange="comprobarReal(this,1,0,99)">
                     </div>
 
                     <div class="group">

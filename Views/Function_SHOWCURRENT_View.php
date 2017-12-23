@@ -30,7 +30,7 @@ class Function_SHOWCURRENT_View{
         <div class="CurrentFormContainer">
 
             <div class="CurrentHeader">
-                <h1>Grupo</h1>
+                <h1>Funcion <span style="color: goldenrod"> <?php echo $function['IdFuncionalidad'];?></span></h1>
             </div>
 
             <div class="CurrentForm1">

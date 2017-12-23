@@ -3,10 +3,10 @@
  * Created by PhpStorm.
  * User: osboxes
  * Date: 12/16/17
- * Time: 4:52 PM
+ * Time: 4:55 PM
  */
 
-class Post_SEARCH_View
+class ImportationUser_SHOWALL_View
 {
 
 }

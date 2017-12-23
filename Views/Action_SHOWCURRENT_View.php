@@ -30,7 +30,7 @@ class Action_SHOWCURRENT_View{
         <div class="CurrentFormContainer">
 
             <div class="CurrentHeader">
-                <h1>Accion</h1>
+                <h1>Accion <span style="color: goldenrod"> <?php echo $action['IdAccion'];?></span> </h1>
             </div>
 
             <div class="CurrentForm1">

@@ -30,7 +30,7 @@ class History_SHOWCURRENT_View{
         <div class="CurrentFormContainer">
 
             <div class="CurrentHeader">
-                <h1>Historia</h1>
+                <h1>Historia <span style="color: goldenrod"> <?php echo $history['IdTrabajo'];?></span></h1>
             </div>
 
             <div class="CurrentForm1">

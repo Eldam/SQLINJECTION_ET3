@@ -6,7 +6,7 @@
  * Time: 4:53 PM
  */
 
-class Post_SHOWALL_View
+class Importation_DELETE_View
 {
 
 }

@@ -339,6 +339,8 @@ INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("DELET
 INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("SEARCH","Buscar","Privilegios de buscar los elementos existentes");
 INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("ASSING","Gestionar Grupo",
 "Privilegios de ver, asignar o eliminar de un grupo existente a un usuario");
+INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("SEND","Enviar","Privilegios de editar una entrega");
+INSERT INTO `ACCION`(`IdAccion`, `NombreAccion`, `DescripAccion`) VALUES ("SEE","Ver entrega","Privilegios de ver una entrega");
 
 
 #Indica que acciones possee cada funcionalidad
@@ -364,6 +366,8 @@ INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("WORK","ACESS")
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("WORK","EDIT");
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("WORK","DELETE");
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("WORK","SEARCH");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("WORK","SEND");
+INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("WORK","SEE");
 
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("SCORE","ADD");
 INSERT INTO `FUNC_ACCION`(`IdFuncionalidad`, `IdAccion`) VALUES ("SCORE","ACESS");
@@ -393,6 +397,8 @@ INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS"
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","WORK","EDIT");
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","WORK","DELETE");
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","WORK ","SEARCH");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","WORK","SEND");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","WORK ","SEE");
 
 
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","PERMIS","ACESS");

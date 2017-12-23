@@ -30,7 +30,7 @@ class Group_SHOWCURRENT_View{
         <div class="CurrentFormContainer">
 
                 <div class="CurrentHeader">
-                    <h1>Grupo</h1>
+                    <h1>Grupo <span style="color: goldenrod"> <?php echo $group['IdGrupo'];?></span> </h1>
                 </div>
 
                 <div class="CurrentForm1">
@@ -49,7 +49,7 @@ class Group_SHOWCURRENT_View{
                     </div>
 
                     <div class="backBttn">
-                        <a href="../Controllers/User_SHOWALL_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>
+                        <a href="../Controllers/Group_SHOWALL_Controller.php"><i class="fa fa-arrow-circle-left" id="returnIcon"></i></a>
                     </div>
 
 

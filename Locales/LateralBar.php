@@ -88,6 +88,30 @@
 
                 <?php } ?>
 
+                <?php if(hasPermisionsTo("WORK","SEARCH")){?>
+
+                    <li class="line2">
+                        <a href="../Controllers/Work_SEARCH_Controller.php"><i class="fa fa-search"></i>Search Work</a>
+                    </li>
+
+                <?php } ?>
+
+                <?php if(hasPermisionsTo("WORK","SEE")){?>
+
+                    <li class="line2">
+                        <a href="../Controllers/Importation_SHOWALL_Controller.php"><i class="fa fa-globe"></i>Show all Importations</a>
+                    </li>
+
+                <?php } ?>
+
+                <?php if(hasPermisionsTo("WORK","SEARCH")){?>
+
+                    <li class="line2">
+                        <a href="../Controllers/Importation_SEARCH_Controller.php"><i class="fa fa-search"></i>Search Importations</a>
+                    </li>
+
+                <?php } ?>
+
                 <!------------------------------------------------------------------------------------------------------------------------>
 
 

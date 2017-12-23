@@ -3,10 +3,10 @@
  * Created by PhpStorm.
  * User: osboxes
  * Date: 12/16/17
- * Time: 4:48 PM
+ * Time: 4:52 PM
  */
 
-class Work_SEARCH_View
+class Importation_SEARCH_View
 {
     function __construct()
     {
@@ -17,7 +17,7 @@ class Work_SEARCH_View
     {
         include '../Locales/Header.html';
         include '../Locales/LateralBar.php';
-        include '../Locales/Work_SEARCH.php';
+        include '../Locales/Importation_SEARCH.php';
         include '../Locales/Footer.html';
     }
 }

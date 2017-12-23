@@ -32,7 +32,7 @@ class User_SHOWCURRENT_View{
             <form action="../Controllers/User_DELETE_Controller.php" onsubmit="comprobarFormsVacios(this)" method="post">
 
                 <div class="CurrentHeader">
-                    <h1>Usuario</h1>
+                    <h1>Usuario <span style="color: goldenrod"> <?php echo $user['login'];?></span></h1>
                 </div>
 
                 <div class="CurrentForm1">

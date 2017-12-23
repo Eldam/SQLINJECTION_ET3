@@ -15,11 +15,11 @@
             <div class="group">
                 <label for="IdTrabajo" class="label">IdTrabajo*:</label>
                 <input id="IdTrabajo" name="IdTrabajo"  type="text" class="input" maxlength="6" autofocus placeholder="IdTrabajo"
-                       onchange="comprobarVacio(this);comprobarAlfabetico(this,6)" required>
+                       onchange="comprobarVacio(this)" required>
             </div>
             <div class="group">
                 <label for="NombreTrabajo" class="label">Nombre Trabajo*:</label>
-                <input id="NombreTrabajo" name="NombreTrabajo" type="text" class="input" maxlength="60" placeholder="Nombre Trabajo" required onchange="comprobarVacio(this);comprobarAlfabetico(this,60)">
+                <input id="NombreTrabajo" name="NombreTrabajo" type="text" class="input" maxlength="60" placeholder="Nombre Trabajo" required onchange="comprobarVacio(this)">
             </div>
             <div class="group">
                 <label for="FechaIniTrabajo" class="label">Fecha Inicio*:</label>
@@ -31,7 +31,7 @@
             </div>
             <div class="group">
                 <label for="PorcentajeNota" class="label">Porcentaje Nota*:</label>
-                <input id="PorcentajeNota" name="PorcentajeNota" class="input" value="0.0" maxlength="2" required onchange="comprobarReal(this,0,10)">
+                <input id="PorcentajeNota" name="PorcentajeNota" class="input" value="0.0" maxlength="2" required onchange="comprobarReal(this,1,0,99)">
             </div>
 
             <div class="group" id="sendDiv">
