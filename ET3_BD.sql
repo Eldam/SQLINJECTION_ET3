@@ -388,6 +388,12 @@ INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS"
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","GROUPS","DELETE");
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","GROUPS ","SEARCH");
 
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","WORK","ADD");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","WORK","ACESS");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","WORK","EDIT");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","WORK","DELETE");
+INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","WORK ","SEARCH");
+
 
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","PERMIS","ACESS");
 INSERT INTO `PERMISO`(`IdGrupo`, `IdFuncionalidad`, `IdAccion`) VALUES ("ADMINS","PERMIS ","SEARCH");

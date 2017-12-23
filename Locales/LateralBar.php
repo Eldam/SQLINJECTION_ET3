@@ -72,6 +72,24 @@
 
                 <!------------------------------------------------------------------------------------------------------------------------>
 
+                <?php if(hasPermisionsTo("WORK","ADD")){?>
+
+                    <li class="line2">
+                        <a href="../Controllers/Work_ADD_Controller.php"><i class="fa fa-users"></i>Add Work</a>
+                    </li>
+
+                <?php } ?>
+
+                <?php if(hasPermisionsTo("WORK","ACESS")){?>
+
+                    <li class="line2">
+                        <a href="../Controllers/Work_SHOWALL_Controller.php"><i class="fa fa-globe"></i>Show all Works</a>
+                    </li>
+
+                <?php } ?>
+
+                <!------------------------------------------------------------------------------------------------------------------------>
+
 
 
                 <?php if(hasPermisionsTo("PERMIS","ACESS")){?>
