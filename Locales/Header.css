@@ -23,13 +23,14 @@
 
 .header-user-dropdown .header-limiter h1{
 	float: left;
-	font: normal 56px Cookie, Arial, Helvetica, sans-serif;
+	font: normal 64px Cookie, Arial, Helvetica, sans-serif;
 	line-height: 40px;
 	margin:0;
 }
 
 .header-user-dropdown .header-limiter h1 span {
 	color: #5383d3;
+	font-size: 48px;
 }
 .header-user-dropdown .header-limiter h1 a {
 	color: #D3A953;

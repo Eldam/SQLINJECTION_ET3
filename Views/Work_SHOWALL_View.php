@@ -39,6 +39,7 @@ class Work_SHOWALL_View
                         <th>Fecha Inicio</th>
                         <th>Fecha Fin</th>
                         <th>Porcentaje Nota</th>
+                        <th>Añadir historias</th>
                         <th>Modificar</th>
                         <th>ver</th>
                         <th>borrar</th>
@@ -56,6 +57,7 @@ class Work_SHOWALL_View
                             "<td>".$work['FechaIniTrabajo']."</td>".
                             "<td>".$work['FechaFinTrabajo']."</td>".
                             "<td>".$work['PorcentajeNota']."</td>".
+                            '<td><a href="../Controllers/Work_SHOWHISTORY_Controller.php?value='.$work["IdTrabajo"].'"><i class="fa fa-pencil-square-o" id="modIcon"></i></td></a>'.
                             '<td><a href="../Controllers/Work_EDIT_Controller.php?value='.$work["IdTrabajo"].'"><i class="fa fa-pencil-square-o" id="modIcon"></i></td></a>'.
                             '<td><a href="../Controllers/Work_SHOWCURRENT_Controller.php?value='.$work["IdTrabajo"].'"><i class="fa fa-eye" id="seeIcon"></i></td></a>'.
                             '<td><a href="../Controllers/Work_DELETE_Controller.php?value='.$work["IdTrabajo"].'"><i class="fa fa-trash" id="delIcon"></i></td></a>'.
